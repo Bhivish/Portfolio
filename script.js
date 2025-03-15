@@ -135,28 +135,28 @@ window.onload = () => {
     if (aboutButton) {
         aboutButton.addEventListener('click', (event) => {
             event.preventDefault();
-            handlePageTransition('about/about.html');
+            handlePageTransition('/about/about.html');
         });
     }
 
     if (viewMoreButton) {
         viewMoreButton.addEventListener('click', (event) => {
             event.preventDefault();
-            handlePageTransition('myDesigns/dashboardDesktop/dashboard.html');
+            handlePageTransition('/myDesigns/dashboardDesktop/dashboard.html');
         });
     }
 
     if (clickDetailsButton1) {
         clickDetailsButton1.addEventListener('click', (event) => {
             event.preventDefault();
-            handlePageTransition('myDesigns/foodAppMobile/cover.html');
+            handlePageTransition('/myDesigns/foodAppMobile/cover.html');
         });
     }
 
     if (clickDetailsButton2) {
         clickDetailsButton2.addEventListener('click', (event) => {
             event.preventDefault();
-            handlePageTransition('dataAnalysis/dataJobs/dataJobs.html');
+            handlePageTransition('/dataAnalysis/dataJobs/dataJobs.html');
         });
     }
 
