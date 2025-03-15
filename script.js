@@ -120,53 +120,48 @@ window.addEventListener('popstate', () => {
 window.onload = () => {
     const transition_el = document.querySelector('.transition');
     const aboutButton = document.querySelector('.aboutButton');
-    const homeButton = document.querySelector('.homeButton');
     const viewMoreButton = document.querySelector('.viewMoreButton');
     const clickDetailsButton1 = document.querySelector('.clickDetailsButton1');
     const clickDetailsButton2 = document.querySelector('.clickDetailsButton2');
 
-    setTimeout(() => {
-        transition_el.classList.remove('is-active');
-    }, 1000);
+    // Listen for the transition end
+    function handlePageTransition(targetPage) {
+        transition_el.classList.add('is-active');
+        transition_el.addEventListener('transitionend', () => {
+            window.location.href = targetPage;
+        }, { once: true });  // Remove the event listener after it runs once
+    }
 
     if (aboutButton) {
         aboutButton.addEventListener('click', (event) => {
             event.preventDefault();
-            transition_el.classList.add('is-active');
-            setTimeout(() => {
-                window.location.href = 'about/about.html';
-            }, 1200);
+            handlePageTransition('about/about.html');
         });
     }
 
     if (viewMoreButton) {
         viewMoreButton.addEventListener('click', (event) => {
             event.preventDefault();
-            transition_el.classList.add('is-active');
-            setTimeout(() => {
-                window.location.href = 'myDesigns/dashboardDesktop/dashboard.html';
-            }, 1200);
+            handlePageTransition('myDesigns/dashboardDesktop/dashboard.html');
         });
     }
 
     if (clickDetailsButton1) {
         clickDetailsButton1.addEventListener('click', (event) => {
             event.preventDefault();
-            transition_el.classList.add('is-active');
-            setTimeout(() => {
-                window.location.href = 'myDesigns/foodAppMobile/cover.html';
-            }, 1200);
+            handlePageTransition('myDesigns/foodAppMobile/cover.html');
         });
     }
 
     if (clickDetailsButton2) {
         clickDetailsButton2.addEventListener('click', (event) => {
             event.preventDefault();
-            transition_el.classList.add('is-active');
-            setTimeout(() => {
-                window.location.href = 'dataAnalysis/dataJobs/dataJobs.html';
-            }, 1200);
+            handlePageTransition('dataAnalysis/dataJobs/dataJobs.html');
         });
     }
 
+    // Reset transition when page loads
+    setTimeout(() => {
+        transition_el.classList.remove('is-active');
+    }, 1000);
 };
