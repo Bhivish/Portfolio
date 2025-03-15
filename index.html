@@ -1,0 +1,329 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BS </title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">                                    
+</head>
+    
+<body id = "homePage">
+        
+    <div class="intro">
+        <div class="logo-header" >
+            <svg id="mylogo" viewBox="0 0 264 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M253.897 121.686L253.884 121.712L253.872 121.738C251.655 126.448 248.547 130.41 244.506 133.679C239.901 137.361 234.454 140.294 228.091 142.434L228.083 142.437L228.074 142.44C221.966 144.514 214.322 145.637 205.004 145.637C194.888 145.637 185.916 144.694 178.048 142.864C171.251 141.271 164.301 139.008 157.195 136.062V126.587C162.987 130.274 169.293 133.286 176.096 135.63C186.236 139.124 195.95 140.938 205.199 140.938C217.812 140.938 228.467 138.591 236.477 133.178C244.686 127.675 249.188 119.894 249.188 110.23C249.188 102.915 247.382 96.2877 242.579 91.6646C238.422 87.6045 232.533 84.8702 225.582 83.0433C220.454 81.6766 214.927 80.5605 209.011 79.6863C203.473 78.8587 197.565 77.8056 191.286 76.5244C179.098 73.9362 170.835 69.6898 165.721 64.3219C160.757 58.9801 158.074 51.9104 158.074 42.5547C158.074 32.3879 162.231 24.1547 171.114 17.4646L171.123 17.4573L171.133 17.45C180.159 10.595 191.853 6.95312 206.664 6.95312C216.508 6.95312 225.427 7.89405 233.45 9.73141C240.136 11.2626 246.127 13.0672 251.445 15.129V23.4443C246.914 20.8264 241.8 18.5764 236.15 16.6643C226.544 13.3263 216.674 11.6523 206.566 11.6523C195.429 11.6523 185.798 13.9609 178.191 19.137L178.179 19.1452L178.167 19.1534C170.517 24.4127 166.191 31.6908 166.191 40.6992C166.191 47.7831 168.037 54.1319 172.432 58.9847C176.788 63.795 183.739 66.7941 192.03 68.7127L192.065 68.7209L192.101 68.7286C196.406 69.6705 202.44 70.7958 210.154 72.1031C217.722 73.3859 224.052 74.6866 229.175 75.9977C239.305 78.6861 246.29 82.585 250.738 87.298C254.864 91.6697 257.305 98.1253 257.305 107.496C257.305 112.183 256.208 116.895 253.897 121.686Z" stroke="#ffffff" stroke-width="12"/>
+            <path d="M91.3881 132.343L91.3718 132.355L91.3556 132.368C86.4986 136.184 81.1889 138.877 75.3932 140.484L75.3857 140.486L75.3783 140.488C69.5847 142.11 61.8788 143 52.0938 143H6.53125V9.58984H43.5977C54.1435 9.58984 61.7257 9.98275 66.5465 10.6969C71.1522 11.3793 75.5622 12.7977 79.7987 14.9701C84.2821 17.3256 87.1784 20.1636 88.9133 23.3521L88.9222 23.3685L88.9313 23.3849C90.7497 26.6777 91.7969 30.8726 91.7969 36.207C91.7969 42.0337 90.334 46.6481 87.6652 50.3617C84.7695 54.3245 80.8593 57.5965 75.7777 60.1373L75.067 60.4927C77.8042 58.2115 79.9208 55.4004 81.2771 52.06C82.9412 48.0531 83.6797 43.5671 83.6797 38.7461C83.6797 34.5936 82.9912 30.6753 81.3173 27.2346C79.5574 23.617 76.763 20.8193 73.2486 18.7986L73.2466 18.7974C69.2876 16.5231 64.7109 15.2587 59.7052 14.8053C55.073 14.3236 49.4603 14.0938 42.9141 14.0938H19.8672H13.8672V20.0938V62.0859V68.0859H19.8672H44.8672C51.0625 68.0859 56.2471 67.7897 60.2892 67.1283L60.3415 67.1197L60.3936 67.1103C64.7198 66.3237 68.756 64.7454 72.4609 62.3892V65.5039V66.2852V71.1785L77.2543 72.1626C85.9812 73.9542 92.4682 77.6921 97.1381 83.1671L97.1476 83.1782L97.1571 83.1893C101.733 88.502 104.199 95.3723 104.199 104.273C104.199 110.735 102.98 116.179 100.718 120.756C98.364 125.521 95.2516 129.35 91.3881 132.343ZM80.6478 76.9799L80.6466 76.9793C76.6994 74.9234 72.1291 73.7259 67.1029 73.2113C62.3774 72.658 56.7403 72.3945 50.2383 72.3945H19.8672H13.8672V78.3945V132.496V138.496H19.8672H45.4531C54.0789 138.496 61.3532 138.067 67.1823 137.154L67.2171 137.149L67.2519 137.143C73.251 136.131 78.5558 134.262 82.9065 131.307L82.9354 131.287L82.9641 131.267C87.2401 128.289 90.6407 124.7 92.8663 120.42C95.1458 116.037 96.082 110.797 96.082 105.055C96.082 98.6924 95.1433 92.9826 92.7915 88.3663C90.3006 83.4766 86.0004 79.7693 80.6478 76.9799Z" stroke="#ffffff" stroke-width="12"/>
+            </svg>      
+        </div>
+    </div>
+
+    <div class = "transition transition-2 is-active">
+        <div class = "transitionLogo">
+            <svg class = "smallLogo smallLogoAnimation animate" width="42" height="42" viewBox="0 0 132 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.2615 2.52H29.2535C34.0748 2.52 38.5335 3.18133 42.6295 4.504C46.7682 5.82667 50.0962 8.00267 52.6135 11.032C55.1735 14.0187 56.4535 18.072 56.4535 23.192C56.4535 26.5627 55.8135 29.5707 54.5335 32.216C53.2962 34.8613 51.6322 37.0373 49.5415 38.744C47.4935 40.408 45.2535 41.5173 42.8215 42.072C44.9548 42.328 47.0242 42.9467 49.0295 43.928C51.0775 44.8667 52.9122 46.1893 54.5335 47.896C56.1975 49.56 57.4988 51.6507 58.4375 54.168C59.4188 56.6427 59.9095 59.5867 59.9095 63C59.9095 67.736 58.8428 71.9173 56.7095 75.544C54.6188 79.128 51.5468 81.944 47.4935 83.992C43.4828 85.9973 38.5548 87 32.7095 87H0.2615V2.52ZM19.3975 71.704H28.1015C30.8322 71.704 33.0508 71.2987 34.7575 70.488C36.5068 69.6347 37.7868 68.44 38.5975 66.904C39.4082 65.3253 39.8135 63.448 39.8135 61.272C39.8135 57.8587 38.7468 55.3627 36.6135 53.784C34.5228 52.1627 31.5788 51.352 27.7815 51.352H19.3975V71.704ZM19.3975 36.376H27.1415C29.4028 36.376 31.2802 35.9707 32.7735 35.16C34.3095 34.3493 35.4615 33.2187 36.2295 31.768C37.0402 30.2747 37.4455 28.568 37.4455 26.648C37.4455 23.192 36.4642 20.8667 34.5015 19.672C32.5388 18.4347 29.8508 17.816 26.4375 17.816H19.3975V36.376ZM102.034 0.983994C107.282 0.983994 111.868 1.56 115.794 2.712C119.719 3.864 122.876 5.07999 125.266 6.35999C127.655 7.64 129.106 8.49333 129.618 8.92L120.402 24.344C119.719 23.832 118.546 23.0853 116.882 22.104C115.26 21.1227 113.319 20.248 111.058 19.48C108.839 18.712 106.514 18.328 104.082 18.328C100.796 18.328 98.1295 18.9253 96.0815 20.12C94.0762 21.272 93.0735 23 93.0735 25.304C93.0735 26.8827 93.6068 28.312 94.6735 29.592C95.7828 30.8293 97.4468 32.024 99.6655 33.176C101.927 34.2853 104.786 35.5013 108.242 36.824C111.399 37.976 114.364 39.3413 117.138 40.92C119.911 42.4987 122.343 44.376 124.434 46.552C126.567 48.6853 128.252 51.16 129.49 53.976C130.727 56.792 131.346 59.992 131.346 63.576C131.346 67.8427 130.471 71.5547 128.722 74.712C126.972 77.8267 124.583 80.408 121.554 82.456C118.567 84.504 115.154 86.0187 111.314 87C107.516 88.024 103.57 88.536 99.4735 88.536C93.6708 88.536 88.4655 87.8747 83.8575 86.552C79.2922 85.2293 75.6015 83.8 72.7855 82.264C69.9695 80.728 68.2842 79.704 67.7295 79.192L77.2655 63.128C77.7775 63.512 78.7588 64.1307 80.2095 64.984C81.7028 65.8373 83.5162 66.7333 85.6495 67.672C87.7828 68.568 90.0442 69.336 92.4335 69.976C94.8655 70.616 97.2548 70.936 99.6015 70.936C103.527 70.936 106.471 70.1893 108.434 68.696C110.396 67.16 111.378 65.1547 111.378 62.68C111.378 60.8453 110.759 59.2027 109.522 57.752C108.284 56.3013 106.428 54.936 103.954 53.656C101.479 52.3333 98.3855 50.9467 94.6735 49.496C90.9615 48.0027 87.4842 46.1893 84.2415 44.056C81.0415 41.9227 78.4388 39.256 76.4335 36.056C74.4282 32.856 73.4255 28.888 73.4255 24.152C73.4255 19.416 74.7482 15.32 77.3935 11.864C80.0815 8.36533 83.6015 5.67733 87.9535 3.8C92.3482 1.92266 97.0415 0.983994 102.034 0.983994Z" fill="white"/>
+            </svg>
+        </div>
+    </div>
+
+
+    
+        <div class = "navbar">
+            <div class = "container nav_container">
+                <a href="index.html" onclick="location.reload(); return false;">
+                    <svg class = "smallLogo smallLogoAnimation animate" viewBox="0 0 132 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.2615 2.52H29.2535C34.0748 2.52 38.5335 3.18133 42.6295 4.504C46.7682 5.82667 50.0962 8.00267 52.6135 11.032C55.1735 14.0187 56.4535 18.072 56.4535 23.192C56.4535 26.5627 55.8135 29.5707 54.5335 32.216C53.2962 34.8613 51.6322 37.0373 49.5415 38.744C47.4935 40.408 45.2535 41.5173 42.8215 42.072C44.9548 42.328 47.0242 42.9467 49.0295 43.928C51.0775 44.8667 52.9122 46.1893 54.5335 47.896C56.1975 49.56 57.4988 51.6507 58.4375 54.168C59.4188 56.6427 59.9095 59.5867 59.9095 63C59.9095 67.736 58.8428 71.9173 56.7095 75.544C54.6188 79.128 51.5468 81.944 47.4935 83.992C43.4828 85.9973 38.5548 87 32.7095 87H0.2615V2.52ZM19.3975 71.704H28.1015C30.8322 71.704 33.0508 71.2987 34.7575 70.488C36.5068 69.6347 37.7868 68.44 38.5975 66.904C39.4082 65.3253 39.8135 63.448 39.8135 61.272C39.8135 57.8587 38.7468 55.3627 36.6135 53.784C34.5228 52.1627 31.5788 51.352 27.7815 51.352H19.3975V71.704ZM19.3975 36.376H27.1415C29.4028 36.376 31.2802 35.9707 32.7735 35.16C34.3095 34.3493 35.4615 33.2187 36.2295 31.768C37.0402 30.2747 37.4455 28.568 37.4455 26.648C37.4455 23.192 36.4642 20.8667 34.5015 19.672C32.5388 18.4347 29.8508 17.816 26.4375 17.816H19.3975V36.376ZM102.034 0.983994C107.282 0.983994 111.868 1.56 115.794 2.712C119.719 3.864 122.876 5.07999 125.266 6.35999C127.655 7.64 129.106 8.49333 129.618 8.92L120.402 24.344C119.719 23.832 118.546 23.0853 116.882 22.104C115.26 21.1227 113.319 20.248 111.058 19.48C108.839 18.712 106.514 18.328 104.082 18.328C100.796 18.328 98.1295 18.9253 96.0815 20.12C94.0762 21.272 93.0735 23 93.0735 25.304C93.0735 26.8827 93.6068 28.312 94.6735 29.592C95.7828 30.8293 97.4468 32.024 99.6655 33.176C101.927 34.2853 104.786 35.5013 108.242 36.824C111.399 37.976 114.364 39.3413 117.138 40.92C119.911 42.4987 122.343 44.376 124.434 46.552C126.567 48.6853 128.252 51.16 129.49 53.976C130.727 56.792 131.346 59.992 131.346 63.576C131.346 67.8427 130.471 71.5547 128.722 74.712C126.972 77.8267 124.583 80.408 121.554 82.456C118.567 84.504 115.154 86.0187 111.314 87C107.516 88.024 103.57 88.536 99.4735 88.536C93.6708 88.536 88.4655 87.8747 83.8575 86.552C79.2922 85.2293 75.6015 83.8 72.7855 82.264C69.9695 80.728 68.2842 79.704 67.7295 79.192L77.2655 63.128C77.7775 63.512 78.7588 64.1307 80.2095 64.984C81.7028 65.8373 83.5162 66.7333 85.6495 67.672C87.7828 68.568 90.0442 69.336 92.4335 69.976C94.8655 70.616 97.2548 70.936 99.6015 70.936C103.527 70.936 106.471 70.1893 108.434 68.696C110.396 67.16 111.378 65.1547 111.378 62.68C111.378 60.8453 110.759 59.2027 109.522 57.752C108.284 56.3013 106.428 54.936 103.954 53.656C101.479 52.3333 98.3855 50.9467 94.6735 49.496C90.9615 48.0027 87.4842 46.1893 84.2415 44.056C81.0415 41.9227 78.4388 39.256 76.4335 36.056C74.4282 32.856 73.4255 28.888 73.4255 24.152C73.4255 19.416 74.7482 15.32 77.3935 11.864C80.0815 8.36533 83.6015 5.67733 87.9535 3.8C92.3482 1.92266 97.0415 0.983994 102.034 0.983994Z" fill="white"/>
+                    </svg>
+                </a>
+                
+                <ul class = "sidebar">
+                    <!-- put anchor tag between the i -->
+                    <li onclick= hideSidebar()><i class='bx bx-x'></i></li> 
+                    <li><a href = "#home"> Home </a></li>
+                    <li><a href = "#services"> Services and Technologies </a></li>
+                    <li><a href = "#projects"> Projects </a></li>
+                    <li><a href = "#contact"> Contact </a></li>
+                </ul>
+                
+                <nav>
+                    <ul class="nav_menu navMenuAnimation animate"> 
+                        <li><a href = "#home"> Home </a></li>
+                        <li><a href = "#services"> Services and Technologies </a></li>
+                        <li><a href = "#projects"> Projects </a></li>
+                        <li><a href = "#contact"> Contact </a></li>
+                    </ul>
+                </nav>
+
+                <div class = "openButton">
+                    <li onclick= showSidebar()><a><i class='bx bx-menu'></i></a></li>
+                </div>
+                
+            </div>
+        </div>
+
+    <section id = "home" class = "home">
+        <div class = "homeContainer">
+            <div class = "homeContent">
+                <h3 class = "hello helloAnimation animate"> Hello, </h3>
+                <h1 class = "myName myNameAnimation animate"> I'm Bhivish Seessa </h1>
+                <h3 class = "myJob myJobAnimation animate"> <span>Frontend Developer, UI/UX Designer & Data Analyst
+                </span> </h3>
+                <p class = "myInfo myInfoAnimation animate"> 
+                    I love designing and creating user-friendly websites and apps. <br> 
+                    I work with HTML, CSS, and JavaScript to build clean and 
+                    <br> responsive designs that look great on all devices. 
+                </p>
+
+                <div class = "social-media">
+                        <a class = "socialMediaAnimation animate" href = "#"> <i class='bx bxl-facebook'></i></a>
+                        <a class = "socialMediaAnimation animate" href = "#"> <i class='bx bxl-instagram'></i></a>
+                        <a class = "socialMediaAnimation animate" href = "#"> <i class='bx bxl-twitter' ></i></a>
+                        <a class = "socialMediaAnimation animate" href = "#"> <i class='bx bxl-linkedin' ></i></a>
+                </div>
+
+                <div class = "links">
+                    <button class = "aboutButton aboutAnimation animate" >About </button>
+                    <a href = "assets/Bhivish_Seessa_Resume.pdf" download = "Bhivish_Seessa_Resume.pdf" class = "resumeButton resumeAnimation animate"> Resume <i class='bx bxs-file-pdf'></i></a>
+                </div>
+
+                <div class = "numbersDetails numbersDetailsAnimation animate">
+                    <div class = "eachNumberDetails">
+                        <h1> <span class = "number"> 10 </span> Months Experience </h1>
+                    </div>
+                    <div class = "eachNumberDetails">
+                        <h1> <span class = "number"> 10+ </span> UI/UX Designs </h1>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class = "imgbody imgAnimation animate"> 
+                <div class = "img-wrap1">
+                    <div class = "img-wrap2">
+                        <img class = "avatarImage" src="assets/profilePic.jpg" alt = "">
+                    </div>   
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id = "services" class = "services">
+            <div class="services_container">
+                <h1 class = "servicesAnimationH animate">Services</h1>
+                <p class = "servicesAnimationP animate"> What <span> I </span> Do <p></p>
+
+                    <div class="content-box servicesAnimationContentBox animate">
+                        <div class = "servicesOneContainer servicesOneContainerAnimation animate">
+                            <div class = "singlecard">
+                                <i class='bx bx-laptop' ></i>
+                                <h2> Front-end Development </h2>
+                                <p> Building user interfaces using HTML, CSS, and JavaScript </p>   
+                            </div>
+                        </div>
+
+                        <div class = "servicesOneContainer servicesOneContainerAnimation animate">
+                            <div class = "singlecard">
+                                <i class='bx bx-laptop' ></i>
+                                <h2> UI/UX Design </h2>
+                                <p> Creating interfaces for all type of screens such as mobile and laptops </p>   
+                            </div>
+                        </div>
+
+                        <div class = "servicesOneContainer servicesOneContainerAnimation animate">
+                            <div class = "singlecard">
+                                <i class='bx bx-laptop' ></i>
+                                <h2> Data Analysis </h2>
+                                <p> Clean, analyse and create graphical visuals such as dashboards </p>   
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skillscontainer">
+                        <h1 class = "servicesAnimationT animate"> Technologies </h1>
+                        <div class = "skillsbox">
+                            <div class = "singleskill singleSkillAnimations animate">
+                                <i class='bx bxl-html5' ></i><a> Html </a>
+                            </div>
+                            <div class = "singleskill singleSkillAnimations animate">
+                                <i class='bx bxl-css3' ></i><a> Css / Scss </a>
+                            </div>
+                            <div class = "singleskill singleSkillAnimations animate">
+                                <i class='bx bxl-javascript' ></i><a> Javascript </a>
+                            </div>
+                            <div class = "singleskill singleSkillAnimations animate">
+                                <i class='bx bxl-bootstrap' ></i><a> Bootstrap </a>
+                            </div>
+                            <div class = "singleskill singleSkillAnimations animate">
+                                <i class='bx bxs-devices' ></i><a> Responsive </a>
+                            </div>
+                            <div class = "singleskill singleSkillAnimations animate">
+                                <i class='bx bxl-figma' ></i><a> Figma </a>
+                            </div>
+                            <div class = "singleskill singleSkillAnimations animate">
+                                <i class='bx bxl-firebase' ></i><a> Sketch </a>
+                            </div>
+
+                            <div class = "singleskill singleSkillAnimations animate">
+                                <i class='bx bxl-adobe'></i><a> Adobe </a>
+                            </div>
+                            <div class = "singleskill singleSkillAnimations animate">
+                                <i class='bx bxs-data'></i><a> Data </a>
+                            </div>
+                            <div class = "singleskill singleSkillAnimations animate">
+                                <i class='bx bxl-microsoft'></i><a> Excel </a>
+                            </div>
+                            <div class = "singleskill singleSkillAnimations animate">
+                                <i class='bx bx-code' ></i><a> SQL </a>
+                            </div>
+                            <div class = "singleskill singleSkillAnimations animate">
+                                <i class='bx bxs-data'></i><a> Power BI </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+    </section>
+
+
+    <section id = "projects" class = "projects">
+        <div class = "projectsinfo">
+            <h1 class = "projectsAnimationTitle animate">Featured Projects</h1>
+            <p class = "projectsAnimationSubtitle animate"> Some <span> PROJECTS </span> and <span> CASE STUDIES </span> I have worked on. <p></p>
+        </div>
+
+        <div class="projects_container">
+                <div class="projectCard">
+                    <div class = "imgContainer img1Animation animate">
+                        <img class = "img1" src = "assets/dashboardUIPic.png">
+                    </div>  
+                    <div class = "infoContainer1 infoContainer1Animation animate">
+                        <h2 class = "projectsAnimationProjectTitle animate"> UI/UX Design </h2>
+                        <div class = "eachInfo1 projectsAnimationProjectPara animate">
+                            <p> Designed a student dashboard UI/UX with a clean layout, intuitive navigation, and essential features like calendars, assignments, and notifications for better usability.
+                            </p>   
+                        </div>
+
+                        <div class = "icons1 iconsAnimation animate">
+                            <p> Design <i class='bx bxs-devices' ></i></p>
+                            <p> Figma <i class='bx bxl-figma'></i> </p>     
+                            <p> Wireframe <i class='bx bxs-mobile' ></i></p>          
+                        </div>
+             
+                        <div class = "navigateButtons detailsAnimation animate">
+                            <button type = "button" class = "detailsButton viewMoreButton"> View More </button>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="projectCard">
+                    <div class = "imgContainer img1Animation2 animate">
+                        <img class = "img1" src = "assets/foodAppPic.png">
+                    </div>    
+                    <div class = "infoContainer1 infoContainer1Animation animate">
+                        <h2 class = "projectsAnimationProjectTitle2 animate">UI/UX Design </h2>
+                        <div class = "eachInfo1 projectsAnimationProjectPara2 animate">
+                            <p> Designed a user-friendly food app UI/UX with intuitive navigation, engaging visuals, and a seamless ordering process for a better user experience.
+                            </p>   
+                        </div>
+
+                        <div class = "icons1 iconsAnimation2 animate">
+                            <p> Design <i class='bx bxs-devices' ></i></p>
+                            <p> Figma <i class='bx bxl-figma'></i> </p>     
+                            <p> Wireframe <i class='bx bxs-mobile' ></i></p>        
+                        </div>
+             
+                        <div class = "navigateButtons detailsAnimation2 animate">
+                            <button type = "button" class = "detailsButton clickDetailsButton1"> Details </button>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="projectCard">
+                    <div class = "imgContainer img1Animation animate">
+                        <img class = "img1" src = "assets/dataDashboardpic.png">
+                    </div>    
+                    <div class = "infoContainer1 infoContainer1Animation animate">
+                        <h2 class = "projectsAnimationProjectTitle animate"> Data Analysis </h2>
+                        <div class = "eachInfo1 projectsAnimationProjectPara animate">
+                            <p> Cleaned, transformed, and visualized data in Power BI to analyze data jobs, including roles, salaries, and industry trends.
+                            </p>   
+                        </div>
+
+                        <div class = "icons1 iconsAnimation animate">
+                            <p> Data <i class='bx bxs-data'></i></p>
+                            <p> Power BI <i class='bx bxs-data'></i> </p>     
+                            <p> Excel <i class='bx bxl-microsoft'></i></p>        
+                        </div>
+             
+                        <div class = "navigateButtons detailsAnimation animate">
+                            <button type = "button" class = "detailsButton clickDetailsButton2"> Details </button>
+                        </div>
+                    </div>                    
+                </div>
+  
+        </div>
+    </section>
+
+
+    <section id = "contact" class = "contact">
+        <!-- <div class = "contactContainer"> -->
+            <div class = "contactinfo">
+                <h2 class = "contactAnimation animate"> Contact </h2>
+                <h3 class = "contactWorkAnimation animate"> Lets work <span> Together </span></h1>
+                <p class = "contactParaAnimation animate">
+                    Are you interested to know more about me. <br>
+                    Feel free to contact me right below. <br>
+                    I am always available for many new opportunities. 
+                </p>
+                <h1 class = "contactThankAnimation animate"> <span> THANK YOU </span> for viewing my Portfolio</h1>
+
+                <div class = "contactButton contactButtonAnimation animate">
+                    <a href = "mailto:yeshseessa@gmail.com" class = "mailButton"> Contact me</a>
+                </div>
+            </div>
+
+            <!-- <div class = "contactinfoForm">
+                <form action = "" class = "contactForm">
+                    <div class = "contactTitle">
+                        <h2 class = "contactAnimation animate"> Get in Touch </h2>
+                    </div>
+                    <input type = "text" name = "name" placeholder = "Name" class = "contactFormName" required>
+                    <input type = "email" name = "email" placeholder = "E-mail" class = "contactFormEmail" required>
+                    <textarea name = "message" placeholder = "Message" class = "contactFormMessage" required></textarea>
+                </form>
+
+                <div class = "contactButton contactButtonAnimation animate">
+                    <a href = "mailto:yeshseessa@gmail.com" class = "mailButton"> Contact me</a>
+                </div>
+            </div> -->
+        <!-- </div>  -->
+
+    
+        <div class = "footer">
+            <div class = "footericons">
+                <a href = "#"> <i class='bx bxl-facebook'></i></a>
+                <a href = "#"> <i class='bx bxl-instagram'></i></a>
+                <a href = "#"> <i class='bx bxl-twitter' ></i></a>
+                <a href = "#"> <i class='bx bxl-linkedin' ></i></a>
+            </div>
+
+            <div class = "footerinfo">
+                <p>
+                    Design and coded by Bhivish Seessa
+                </p>
+                <p>
+                    Disclaimer: This website is still in development. Please excuse any incomplete sections or features.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src = "script.js"></script>
+    
+    
+</body>
+</html>

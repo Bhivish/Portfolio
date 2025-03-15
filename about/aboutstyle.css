@@ -1,0 +1,826 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+  
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #5e5e5e;
+    border-radius: 2px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #34343a;
+    border-left: 1px solid #1e1f21;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #08090b;
+}
+
+.transition-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    background-color: #21242b;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.1s ease;
+}
+
+.transition-1.is-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.navbar {
+    color: #000;
+    background: #000000;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 99;
+    border-bottom: 2px solid #21242b;
+}
+
+.nav_container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_container .smallLogo {
+    position: relative;
+    left: 100px;
+    animation: slideLeft 1s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}  
+
+
+.about {
+    min-height: 120svh;
+    background: #000000;
+    display: grid;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.aboutInfo {
+    margin: 20% 0px 0px 0px;
+}
+
+.aboutInfo h1 {
+    position: relative;
+    color: #fff;
+    font-weight: 100;
+    margin: 0px 0px 20px 5px;
+    font-size: 3rem;
+}
+
+.gridContainer {
+    position: relative;
+    width: 100svw;
+    height: 100svh;
+    max-width: 800px;
+    max-height: 500px;
+    display: flex;
+    gap: 10px;
+}
+
+
+/* -------------- first column -------------- */
+
+.gridContainer .firstColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gridContainer .firstRow {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.firstRow .row1 {
+    background: #1c1c1f;
+    flex: 1;
+    border-radius: 5px;
+}
+
+.row1Animation {
+    animation: slideBottom 500ms;
+    animation-delay: 1000ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideBottom {
+    from {
+        transform: translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.row1 h1 {
+    color: #fff;
+    margin: 20px 0px 0px 20px;
+    font-weight: 100;
+}
+
+.row1 p {
+    color: #d0d6e0;
+    line-height: 1.2;
+    font-size: 0.9rem;
+    margin: 10px 20px 0px;
+}
+
+.gridContainer .secondRow {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.secondRow .row2,
+.secondRow .row2Image {
+    border-radius: 5px;
+    flex: 1;
+    background-color: #1c1c1f;
+}
+
+.secondRow .row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row2Animation {
+    animation: slideBottom 500ms;
+    animation-delay: 1400ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.row2 h1 {
+    color: #ffffff;
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.3rem;
+    width: 90%;
+    line-height: 1.1;
+}
+
+.row2Image {
+    background-image: url(aboutImages/catImage.jpg);
+    background-size: cover;
+}
+
+.row2ImageAnimation {
+    animation: slideBottom 500ms;
+    animation-delay: 1300ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.gridContainer .thirdRow {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.thirdRow .row3 {
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    background-color: #1c1c1f;
+}
+
+.row3Animation {
+    animation: slideBottom 500ms;
+    animation-delay: 1600ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.row3_2Animation {
+    animation: slideBottom 500ms;
+    animation-delay: 1700ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.row3 h1 {
+    font-weight: 100;
+    font-size: 2rem;
+    color: #a0a0a0;
+}
+
+.row3 span {
+    font-size: 1.5rem;
+    color: #a0a0a0
+}
+
+.row3 h2 {
+    font-weight: 100;
+    font-size: 1.2rem;
+    line-height: 1.1;
+    color: #d0d6e0;
+    width: 100%;
+}
+
+/* -------------- second column -------------- */
+
+.gridContainer .secondColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gridContainer .firstRow2 {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.firstRow2 .row4 {
+    border-radius: 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #1c1c1f;
+}
+
+.row4Animation {
+    animation: slideBottom 500ms;
+    animation-delay: 1100ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.row4_1Animation {
+    animation: slideBottom 500ms;
+    animation-delay: 1200ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.row4 h1 {
+    color: #a0a0a0;;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+.row4 .myLocation {
+    color: #fff;
+}
+
+.row4 h2 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.gridContainer .secondRow2 {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.secondRow2 .row5 {
+    border-radius: 5px;
+    flex: 1;
+    background-color: #1c1c1f;
+}
+
+.row5 {
+    background-image: url(aboutImages/catSilhouette.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.row5Animation {
+    animation: slideBottom 500ms;
+    animation-delay: 1500ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.gridContainer .thirdRow2 {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.thirdRow2 .row6 {
+    border-radius: 5px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c1c1f;
+}
+
+.row6Animation {
+    animation: slideBottom 500ms;
+    animation-delay: 1800ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.row6_2Animation {
+    animation: slideBottom 500ms;
+    animation-delay: 1900ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.row6 h1{
+    color: #ffffff;
+    font-weight: 100;
+    padding-bottom: 5px;
+    
+}
+
+.row6 p {
+    color: #d0d6e0;
+    padding-bottom: 5px;
+}
+
+/* -------------- third column -------------- */
+
+.gridContainer .thirdColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gridContainer .firstRow3 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.firstRow3 .row7 {
+    border-radius: 5px;
+    flex: 1;
+    background-color: #1c1c1f;
+}
+
+.gridContainer .secondRow3 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.secondRow3 .row8 {
+    border-radius: 5px;
+    flex: 1;
+    background-color: #1c1c1f;
+}
+
+@media only screen and (min-width:0px) and (max-width: 1023px){ 
+
+    .about {
+        min-height: 1800px;
+    }
+
+    .nav_container .smallLogo {
+        left: 30px;
+    }
+
+    .aboutInfo {
+        margin: 20px 0px 0px 50px;
+    }
+
+    .aboutInfo h1 {
+        font-size: 2rem;
+    }
+    
+    .gridContainer {
+        flex-direction: column;
+        min-height: 1500px;
+        width: 350px;
+    }
+
+    .firstColumn {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .row1 h1 {
+        font-size: 1.2rem;
+    }
+
+    .row1 p {
+        font-size: 0.8rem;
+    }
+
+    .row2Image {
+        min-height: 200px;
+    }
+
+    .row2 {
+        min-height: 100px;
+    }
+
+    .row2 h1 {
+        font-size: 1.2rem;
+        min-height: 50px;
+    }
+
+    .row3 h1 {
+        font-size: 1.4rem;
+    }
+
+    .row3 span {
+        font-size: 1.2rem;
+    }
+
+    .row3 h2 {
+        font-size: 1rem;
+    }
+
+    .secondColumn {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .secondRow {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row4 h1 {
+        font-size: 1.4rem;
+    }
+
+    .row4 h2 {
+        font-size: 1rem;
+    }
+
+
+    .thirdRow {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .firstRow2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .thirdRow2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row6 {
+        min-height: 100px;
+    }
+
+    .row6 h1 {
+        font-size: 1.4rem;
+    }
+
+    .row6 p {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
+    .row1 p {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 1023px) {
+
+    .nav_container .smallLogo {
+        left: 50px;
+    }
+
+    .gridContainer {
+        flex-direction: column;
+        min-height: 1500px;
+        width: 400px;
+    }
+
+    .row1 h1 {
+        font-size: 1.4rem;
+    }
+
+    .row1 p {
+        font-size: 0.9rem;
+    }
+
+    .row2 h1 {
+        font-size: 1.4rem;
+        min-height: 50px;
+    }
+
+    .row3 h1 {
+        font-size: 1.8rem;
+    }
+
+    .row3 span {
+        font-size: 1.4rem;
+    }
+
+    .row3 h2 {
+        font-size: 1.2rem;
+    }
+
+    .secondColumn {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .row4 h1 {
+        font-size: 1.8rem;
+    }
+
+    .row4 h2 {
+        font-size: 1.4rem;
+    }
+
+    .thirdRow {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .firstRow2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .thirdRow2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .row6 h1 {
+        font-size: 1.4rem;
+    }
+
+    .row6 p {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+
+    .nav_container .smallLogo {
+        left: 50px;
+    }
+
+    .gridContainer {
+        flex-direction: column;
+        min-height: 1500px;
+        width: 580px;
+    }
+
+    .row1 h1 {
+        font-size: 1.8rem;
+    }
+
+    .row1 p {
+        font-size: 1.2rem;
+    }
+
+    .row2 h1 {
+        font-size: 1.5rem;
+        min-height: 50px;
+    }
+
+    .row3 h1 {
+        font-size: 2.5rem;
+    }
+
+    .row3 span {
+        font-size: 2rem;
+    }
+
+    .row3 h2 {
+        font-size: 1.2rem;
+    }
+
+    .secondColumn {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .row4 h1 {
+        font-size: 2rem;
+    }
+
+    .row4 h2 {
+        font-size: 1.5rem;
+    }
+
+    .row4 .myLocation {
+        font-size: 2rem;
+    }
+
+    .row6 h1 {
+        font-size: 1.8rem;
+    }
+
+    .row6 p {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .nav_container .smallLogo {
+        left: 50px;
+    }
+
+    .gridContainer {
+        flex-direction: column;
+        min-height: 1500px;
+        width: 680px;
+    }
+
+    .row1 h1 {
+        font-size: 1.8rem;
+    }
+
+    .row1 p {
+        font-size: 1.2rem;
+    }
+
+    .row2 h1 {
+        font-size: 1.5rem;
+        min-height: 50px;
+    }
+
+    .row3 h1 {
+        font-size: 2.5rem;
+    }
+
+    .row3 span {
+        font-size: 2rem;
+    }
+
+    .row3 h2 {
+        font-size: 1.2rem;
+    }
+
+    .secondColumn {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .row4 h1 {
+        font-size: 2rem;
+    }
+
+    .row4 h2 {
+        font-size: 1.5rem;
+    }
+
+    .row4 .myLocation {
+        font-size: 2rem;
+    }
+
+    .row6 h1 {
+        font-size: 1.8rem;
+    }
+
+    .row6 p {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1449px) {
+    
+    .about {
+        min-height: 750px;
+    }
+
+    .aboutInfo {
+        margin: 15% 0px 0px 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1449px) {
+    
+    .about {
+        min-height: 800px;
+    }
+
+    .aboutInfo {
+        margin: 15% 0px 0px 0px;
+    }
+}
+
+@media only screen and (min-width: 1500px){
+
+    .navbar {
+        max-width: 1920px;
+    }
+
+    .about {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    .aboutInfo {
+        margin: 15% 0px 0px 0px;
+    }
+
+    .gridContainer {
+        margin: 0% 0px;
+        max-height: 700px;
+        max-width: 1200px;
+    }
+
+    .row1 h1 {
+        margin: 20px 0px 0px 30px;
+        font-weight: 100;
+        font-size: 2rem;
+    }
+    
+    .row1 p {
+        line-height: 1.2;
+        font-size: 1.2rem;
+        margin: 10px 30px 0px 30px;
+    }
+
+    .row2 h1 {
+        font-size: 1.8rem;
+    }
+
+    .row3 h1 {
+        font-size: 3rem;
+    }
+
+    .row3 span {
+        font-size: 2rem;
+    }
+
+    .row3 h2 {
+        font-size: 1.5rem;
+    }
+
+    .row4 h1 {
+        font-size: 3rem;
+    }
+
+    .row4 h2 {
+        font-size: 1.8rem;
+    }
+
+    .row4 .myLocation {
+        font-size: 2rem;
+    }
+
+    .row6 h1 {
+        font-size: 2rem;
+        padding-bottom: 10px;
+    }
+
+    .row6 p {
+        font-size: 1.3rem;
+    }
+}
+
+
