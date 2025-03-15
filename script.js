@@ -160,7 +160,22 @@ window.onload = () => {
         });
     }
 
-    // Reset transition when page loads
+    // Reset transition when page loads (also on back navigation)
+    function resetTransitionOnBack() {
+        if (transition_el.classList.contains('is-active')) {
+            // Remove transition class if the user is navigating back
+            setTimeout(() => {
+                transition_el.classList.remove('is-active');
+            }, 100);
+        }
+    }
+
+    // Add popstate listener to detect back navigation
+    window.addEventListener('popstate', () => {
+        resetTransitionOnBack();
+    });
+
+    // Initial setup for transition reset
     setTimeout(() => {
         transition_el.classList.remove('is-active');
     }, 1000);
