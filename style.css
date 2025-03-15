@@ -2199,6 +2199,7 @@ span {
 
     .navbar {
         max-width: 1440px;
+        height: 80px;
     }
 
     .nav_container {

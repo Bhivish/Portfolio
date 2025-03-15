@@ -1,6 +1,6 @@
 const body = document.body;
 
-if (body.id === "homePage") {
+
 anime({
 	targets: '#mylogo path',
 	strokeDashoffset: [anime.setDashoffset, 0],
@@ -115,7 +115,7 @@ window.addEventListener('popstate', () => {
     intro.style.display = 'none';
 });
 
-} // end of body for homepage 
+ // end of body for homepage 
 
 window.onload = () => {
     const transition_el = document.querySelector('.transition');
@@ -160,22 +160,7 @@ window.onload = () => {
         });
     }
 
-    // Reset transition when page loads (also on back navigation)
-    function resetTransitionOnBack() {
-        if (transition_el.classList.contains('is-active')) {
-            // Remove transition class if the user is navigating back
-            setTimeout(() => {
-                transition_el.classList.remove('is-active');
-            }, 100);
-        }
-    }
-
-    // Add popstate listener to detect back navigation
-    window.addEventListener('popstate', () => {
-        resetTransitionOnBack();
-    });
-
-    // Initial setup for transition reset
+    // Reset transition when page loads
     setTimeout(() => {
         transition_el.classList.remove('is-active');
     }, 1000);
