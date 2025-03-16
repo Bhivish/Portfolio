@@ -48,6 +48,21 @@ body {
     pointer-events: all;
 }
 
+.transition-2 {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    bottom: 0;
+    z-index: 200;
+    background-color: #21242b;
+    transition: 1.2s ease-out;
+}
+
+.transition-2.is-active {
+    left: 0%;
+}
+
 .navbar {
     color: #000;
     background: #000000;
