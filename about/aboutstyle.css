@@ -101,6 +101,13 @@ body {
     margin: 20% 0px 0px 0px;
 }
 
+.aboutInfoAnimation {
+    animation: slideBottom 500ms;
+    animation-delay: 100ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
 .aboutInfo h1 {
     position: relative;
     color: #fff;
@@ -144,7 +151,7 @@ body {
 
 .row1Animation {
     animation: slideBottom 500ms;
-    animation-delay: 1000ms;
+    animation-delay: 200ms;
     opacity: 0;
     animation-fill-mode: forwards;
 }
@@ -193,7 +200,7 @@ body {
 
 .row2Animation {
     animation: slideBottom 500ms;
-    animation-delay: 1400ms;
+    animation-delay: 600ms;
     opacity: 0;
     animation-fill-mode: forwards;
 }
@@ -214,7 +221,7 @@ body {
 
 .row2ImageAnimation {
     animation: slideBottom 500ms;
-    animation-delay: 1300ms;
+    animation-delay: 500ms;
     opacity: 0;
     animation-fill-mode: forwards;
 }
@@ -239,14 +246,14 @@ body {
 
 .row3Animation {
     animation: slideBottom 500ms;
-    animation-delay: 1600ms;
+    animation-delay: 800ms;
     opacity: 0;
     animation-fill-mode: forwards;
 }
 
 .row3_2Animation {
     animation: slideBottom 500ms;
-    animation-delay: 1700ms;
+    animation-delay: 900ms;
     opacity: 0;
     animation-fill-mode: forwards;
 }
@@ -298,14 +305,14 @@ body {
 
 .row4Animation {
     animation: slideBottom 500ms;
-    animation-delay: 1100ms;
+    animation-delay: 300ms;
     opacity: 0;
     animation-fill-mode: forwards;
 }
 
 .row4_1Animation {
     animation: slideBottom 500ms;
-    animation-delay: 1200ms;
+    animation-delay: 400ms;
     opacity: 0;
     animation-fill-mode: forwards;
 }
@@ -348,7 +355,7 @@ body {
 
 .row5Animation {
     animation: slideBottom 500ms;
-    animation-delay: 1500ms;
+    animation-delay: 700ms;
     opacity: 0;
     animation-fill-mode: forwards;
 }
@@ -371,14 +378,14 @@ body {
 
 .row6Animation {
     animation: slideBottom 500ms;
-    animation-delay: 1800ms;
+    animation-delay: 1000ms;
     opacity: 0;
     animation-fill-mode: forwards;
 }
 
 .row6_2Animation {
     animation: slideBottom 500ms;
-    animation-delay: 1900ms;
+    animation-delay: 1100ms;
     opacity: 0;
     animation-fill-mode: forwards;
 }

@@ -117,11 +117,35 @@ window.addEventListener('popstate', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const aboutButton = document.querySelector('.aboutButton');
+    const viewMoreButton = document.querySelector('.viewMoreButton');
+    const clickDetailsButton1 = document.querySelector('.clickDetailsButton1');
+    const clickDetailsButton2 = document.querySelector('.clickDetailsButton2');
 
     if (aboutButton) {
         aboutButton.addEventListener('click', (event) => {
             event.preventDefault();  // Prevents default button behavior
             window.location.href = '/about/about.html';  // Redirect to about.html
+        });
+    }
+
+    if (viewMoreButton) {
+        viewMoreButton.addEventListener('click', (event) => {
+            event.preventDefault();  // Prevents default button behavior
+            window.location.href = '/myDesigns/dashboardDesktop/dashboard.html';  // Redirect to about.html
+        });
+    }
+
+    if (clickDetailsButton1) {
+        clickDetailsButton1.addEventListener('click', (event) => {
+            event.preventDefault();  // Prevents default button behavior
+            window.location.href = '/myDesigns/foodAppMobile/cover.html';  // Redirect to cover.html
+        });
+    }
+
+    if (clickDetailsButton2) {
+        clickDetailsButton2.addEventListener('click', (event) => {
+            event.preventDefault();  // Prevents default button behavior
+            window.location.href = '/dataAnalysis/dataJobs/dataJobs.html';  // Redirect to about.html
         });
     }
 });
