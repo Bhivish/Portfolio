@@ -1,6 +1,6 @@
 const body = document.body;
 
-
+if (body.id === "homePage") {
 anime({
 	targets: '#mylogo path',
 	strokeDashoffset: [anime.setDashoffset, 0],
@@ -115,7 +115,7 @@ window.addEventListener('popstate', () => {
     intro.style.display = 'none';
 });
 
- // end of body for homepage 
+} // end of body for homepage 
 
 window.onload = () => {
     const transition_el = document.querySelector('.transition');
@@ -124,12 +124,12 @@ window.onload = () => {
     const clickDetailsButton1 = document.querySelector('.clickDetailsButton1');
     const clickDetailsButton2 = document.querySelector('.clickDetailsButton2');
 
-    // Listen for the transition end
+    // Function to handle page transitions
     function handlePageTransition(targetPage) {
         transition_el.classList.add('is-active');
-        transition_el.addEventListener('transitionend', () => {
+        setTimeout(() => {
             window.location.href = targetPage;
-        }, { once: true });  // Remove the event listener after it runs once
+        }, 1200);
     }
 
     if (aboutButton) {
@@ -159,6 +159,11 @@ window.onload = () => {
             handlePageTransition('/dataAnalysis/dataJobs/dataJobs.html');
         });
     }
+
+    // Fix for the browser back button
+    window.addEventListener("popstate", () => {
+        transition_el.classList.remove('is-active'); // Ensure transition resets when going back
+    });
 
     // Reset transition when page loads
     setTimeout(() => {
