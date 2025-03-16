@@ -135,6 +135,7 @@ body {
     background-color: #08090b;
     display: flex;
     flex-direction: row;
+    border: 1px solid #fff;
 }
 
 nav {

@@ -115,58 +115,74 @@ window.addEventListener('popstate', () => {
     intro.style.display = 'none';
 });
 
-} // end of body for homepage 
-
-window.onload = () => {
-    const transition_el = document.querySelector('.transition');
+document.addEventListener('DOMContentLoaded', () => {
     const aboutButton = document.querySelector('.aboutButton');
-    const viewMoreButton = document.querySelector('.viewMoreButton');
-    const clickDetailsButton1 = document.querySelector('.clickDetailsButton1');
-    const clickDetailsButton2 = document.querySelector('.clickDetailsButton2');
-
-    // Function to handle page transitions
-    function handlePageTransition(targetPage) {
-        transition_el.classList.add('is-active');
-        setTimeout(() => {
-            window.location.href = targetPage;
-        }, 1200);
-    }
 
     if (aboutButton) {
         aboutButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            handlePageTransition('/about/about.html');
+            event.preventDefault();  // Prevents default button behavior
+            window.location.href = '/about/about.html';  // Redirect to about.html
         });
     }
+});
 
-    if (viewMoreButton) {
-        viewMoreButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            handlePageTransition('/myDesigns/dashboardDesktop/dashboard.html');
-        });
-    }
+} // end of body for homepage 
 
-    if (clickDetailsButton1) {
-        clickDetailsButton1.addEventListener('click', (event) => {
-            event.preventDefault();
-            handlePageTransition('/myDesigns/foodAppMobile/cover.html');
-        });
-    }
 
-    if (clickDetailsButton2) {
-        clickDetailsButton2.addEventListener('click', (event) => {
-            event.preventDefault();
-            handlePageTransition('/dataAnalysis/dataJobs/dataJobs.html');
-        });
-    }
 
-    // Fix for the browser back button
-    window.addEventListener("popstate", () => {
-        transition_el.classList.remove('is-active'); // Ensure transition resets when going back
-    });
 
-    // Reset transition when page loads
-    setTimeout(() => {
-        transition_el.classList.remove('is-active');
-    }, 1000);
-};
+
+
+// window.onload = () => {
+//     const transition_el = document.querySelector('.transition');
+//     const aboutButton = document.querySelector('.aboutButton');
+//     const viewMoreButton = document.querySelector('.viewMoreButton');
+//     const clickDetailsButton1 = document.querySelector('.clickDetailsButton1');
+//     const clickDetailsButton2 = document.querySelector('.clickDetailsButton2');
+
+//     // Function to handle page transitions
+//     function handlePageTransition(targetPage) {
+//         transition_el.classList.add('is-active');
+//         setTimeout(() => {
+//             window.location.href = targetPage;
+//         }, 1200);
+//     }
+
+//     if (aboutButton) {
+//         aboutButton.addEventListener('click', (event) => {
+//             event.preventDefault();
+//             handlePageTransition('/about/about.html');
+//         });
+//     }
+
+//     if (viewMoreButton) {
+//         viewMoreButton.addEventListener('click', (event) => {
+//             event.preventDefault();
+//             handlePageTransition('/myDesigns/dashboardDesktop/dashboard.html');
+//         });
+//     }
+
+//     if (clickDetailsButton1) {
+//         clickDetailsButton1.addEventListener('click', (event) => {
+//             event.preventDefault();
+//             handlePageTransition('/myDesigns/foodAppMobile/cover.html');
+//         });
+//     }
+
+//     if (clickDetailsButton2) {
+//         clickDetailsButton2.addEventListener('click', (event) => {
+//             event.preventDefault();
+//             handlePageTransition('/dataAnalysis/dataJobs/dataJobs.html');
+//         });
+//     }
+
+//     // Fix for the browser back button
+//     window.addEventListener("popstate", () => {
+//         transition_el.classList.remove('is-active'); // Ensure transition resets when going back
+//     });
+
+//     // Reset transition when page loads
+//     setTimeout(() => {
+//         transition_el.classList.remove('is-active');
+//     }, 1000);
+// };
