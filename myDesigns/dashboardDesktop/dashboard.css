@@ -93,6 +93,7 @@ body {
     animation-fill-mode: forwards;
     opacity: 1;
     animation-delay: 3200ms;
+    width: 40px;
 }  
 
 .blurImage {
@@ -186,6 +187,7 @@ body {
     width: min(80vw, 1500px); 
     height: auto; 
     object-fit: contain; 
+    border-radius: 5px;
 }
 
 .projectOverviewContainer {
@@ -318,6 +320,7 @@ body {
     width: 100%;
     overflow: auto;
     margin-top: auto;
+    font-style: italic;
 }
 
 .footericons {
@@ -332,7 +335,7 @@ body {
     width: 50px;
     height: 50px;
     background: transparent;
-    border: 1.5px solid #5e5e5e;
+    border: 1.5px solid #34343a;
     border-radius: 50%;
     font-size: 1.2rem;
     color: #fff;
@@ -379,7 +382,6 @@ body {
         width: 20px;
         font-size: 2rem;
     }  
-    
 
     .allContainer {
         padding-top: 80px;
@@ -551,7 +553,31 @@ body {
 @media only screen and (min-width: 1024px) and (max-width: 1919px){
     
     .navbar {
-        height: 70px;
+        height: 60px;
+    }
+
+    .nav_container .smallLogo {
+        width: 24px;
+        margin-left: 0px;
+    }
+
+    .allContainer {
+        padding-top: 120px;
+    }
+
+    .coverImageBorder::before, 
+    .coverImageBorder::after {
+        padding: 6px 6px;
+    }
+
+
+    .coverImageContainer::before, 
+    .coverImageContainer::after {
+        padding: 8px 8px;
+    }
+
+    .projectInfo {
+        margin: 0px 0px 50px 8.8%;
     }
 
     .projectInfo h1{
@@ -564,9 +590,23 @@ body {
         font-weight: 100;
     }
 
+    .image1Border::before, 
+    .image1Border::after {
+        padding: 6px 6px;
+    }
+
+    .image1Containers::before, 
+    .image1Containers::after {
+        padding: 8px 8px;
+    }
+
+    .projectOverviewContainer {
+        margin: 50px 10% 50px 8.8%;
+    }
+
     .projectOverviewInfo {
         position: relative;    
-        margin: 10px 0 0 100px;
+        margin: 5px 0 0 100px;
     } 
 
     .projectOverview h1 {
@@ -584,7 +624,7 @@ body {
     }
 
     .singleskill a {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .singleskill i {
@@ -592,11 +632,14 @@ body {
     }
 
     .projectOverviewInfo p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        line-height: 1.2;
     }
 
     .imagesContainer h1 {
         font-size: 1.8rem;
+        padding-bottom: 40px;
+        margin: 0 0 0 -12px;
     }
 
     .footer {
@@ -607,10 +650,74 @@ body {
         width: 30px;
         height: 30px;
         font-size: 14px;
+        margin: 30px 5px 30px 0;
     }
 
     .footerinfo p {
-        font-size: 14px;
+        font-size: 12px;
+    } 
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1919px){
+
+    .navbar {
+        height: 70px;
+    }
+
+    .nav_container .smallLogo {
+        width: 32px;
+    }
+
+    .projectInfo h1 {
+        font-size: 2rem;
+    }
+
+    .projectInfo h2 {
+        font-size: 1.5rem;
+    }
+
+    .projectOverviewInfo {
+        margin: 10px 0 0 100px;
+    } 
+
+    .projectOverview h1 {
+        font-size: 2rem;
+    }
+
+    .singleskill {
+        height: 40px;
+        width: 220px;
+        padding: 0px 0px 0px 10px;
+    }
+
+    .singleskill a {
+        font-size: 1rem;
+    }
+
+    .singleskill i {
+        font-size: 1.5rem;
+    }
+
+    .projectOverviewInfo p {
+        font-size: 0.85rem;
+    }
+
+    .imagesContainer h1 {
+        font-size: 2rem;
+    }
+
+    .footer {
+        min-height: 180px;
+    }
+
+    .footericons a{
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .footerinfo p {
+        font-size: 16px;
     } 
 }
 
@@ -651,7 +758,7 @@ body {
     }
 
     .projectOverviewInfo p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .imagesContainer h1 {

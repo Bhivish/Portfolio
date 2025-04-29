@@ -82,10 +82,11 @@ body {
 
 .nav_container .smallLogo {
     position: relative;
-    left: 100px;
+    left: 6.25rem;
     animation: slideLeft 1s;
     animation-fill-mode: forwards;
     opacity: 1;
+    width: 40px;
 }  
 
 
@@ -455,6 +456,7 @@ body {
     width: 100%;
     overflow: auto;
     margin-top: auto;
+    font-style: italic;
 }
 
 .footericons {
@@ -469,7 +471,7 @@ body {
     width: 50px;
     height: 50px;
     background: transparent;
-    border: 1.5px solid #5e5e5e;
+    border: 1.5px solid #34343a;
     border-radius: 50%;
     font-size: 1.2rem;
     color: #fff;
@@ -847,13 +849,70 @@ body {
         min-height: 850px;
     }
 
+    .navbar {
+        height: 60px;
+    }
+
+    .nav_container .smallLogo {
+        width: 24px;
+        max-width: 1200px;
+    }
+
     .aboutInfo {
         margin: 15% 0px 0px 0px;
     }
 
     .aboutInfo h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
+
+    .row1 h1 {
+        font-weight: 100;
+        font-size: 1.4rem;
+    }
+    
+    .row1 p {
+        line-height: 1.2;
+        font-size: 0.8rem;
+    }
+
+    .row2 h1 {
+        font-size: 1.3rem;
+    }
+
+    .row3 h1 {
+        font-size: 2rem;
+    }
+
+    .row3 span {
+        font-size: 1.4rem;
+    }
+
+    .row3 h2 {
+        font-size: 1rem;
+    }
+
+    .row4 h1 {
+        font-size: 2rem;
+    }
+
+    .row4 h2 {
+        font-size: 1rem;
+    }
+
+    .row4 .myLocation {
+        font-size: 1.6rem;
+    }
+
+    .row6 h1 {
+        font-size: 1.4rem;
+        padding-bottom: 10px;
+    }
+
+    .row6 p {
+        font-size: 0.9rem;
+    }
+
 
     .footer {
         min-height: 150px;
@@ -863,6 +922,7 @@ body {
         width: 30px;
         height: 30px;
         font-size: 14px;
+        margin: 30px 5px 30px 0;
     }
 
     .footerinfo p {
@@ -875,6 +935,15 @@ body {
     .about {
         min-height: 800px;
     }
+
+    .navbar {
+        height: 60px;
+    }
+
+    .nav_container .smallLogo {
+        width: 30px;
+        left: 6.25rem;
+    }  
 
     .aboutInfo {
         margin: 15% 0px 0px 0px;
@@ -913,12 +982,12 @@ body {
     
     .row1 p {
         line-height: 1.2;
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin: 10px 30px 0px 30px;
     }
 
     .row2 h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .row3 h1 {
@@ -926,11 +995,11 @@ body {
     }
 
     .row3 span {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     .row3 h2 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .row4 h1 {
@@ -946,12 +1015,12 @@ body {
     }
 
     .row6 h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         padding-bottom: 10px;
     }
 
     .row6 p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .footer {

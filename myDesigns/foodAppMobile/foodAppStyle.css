@@ -93,6 +93,7 @@ body {
     animation-fill-mode: forwards;
     opacity: 1;
     animation-delay: 3200ms;
+    width: 40px;
 }  
 
 .allContainer {
@@ -307,6 +308,7 @@ body {
     width: 100%;
     overflow: auto;
     margin-top: auto;
+    font-style: italic;
 }
 
 .footericons {
@@ -321,7 +323,7 @@ body {
     width: 50px;
     height: 50px;
     background: transparent;
-    border: 1.5px solid #5e5e5e;
+    border: 1.5px solid #34343a;
     border-radius: 50%;
     font-size: 1.2rem;
     color: #fff;
@@ -543,6 +545,30 @@ body {
         height: 70px;
     }
 
+    .nav_container .smallLogo {
+        width: 24px;
+        left: 90px;
+    }
+
+    .allContainer {
+        padding-top: 120px;
+    }
+
+    .coverImageBorder::before, 
+    .coverImageBorder::after {
+        padding: 6px 6px;
+    }
+
+
+    .coverImageContainer::before, 
+    .coverImageContainer::after {
+        padding: 8px 8px;
+    }
+
+    .projectInfo {
+        margin: 0px 0px 50px 8.8%;
+    }
+
     .projectInfo h1{
         font-size: 2rem;
         font-weight: 100;
@@ -551,6 +577,20 @@ body {
     .projectInfo h2{
         font-size: 1.4rem;
         font-weight: 100;
+    }
+
+    .image1Border::before, 
+    .image1Border::after {
+        padding: 6px 6px;
+    }
+
+    .image1Containers::before, 
+    .image1Containers::after {
+        padding: 8px 8px;
+    }
+
+    .projectOverviewContainer {
+        margin: 50px 10% 50px 8.8%;
     }
 
     .projectOverviewInfo {
@@ -573,7 +613,7 @@ body {
     }
 
     .singleskill a {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .singleskill i {
@@ -581,11 +621,15 @@ body {
     }
 
     .projectOverviewInfo p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        line-height: 1.2;
     }
 
     .imagesContainer h1 {
         font-size: 1.8rem;
+        position: relative;
+        margin: 0 0 0 -12px;
+        padding-bottom: 40px;
     }
 
     .footer {
@@ -596,10 +640,11 @@ body {
         width: 30px;
         height: 30px;
         font-size: 14px;
+        margin: 30px 5px 30px 0;
     }
 
     .footerinfo p {
-        font-size: 14px;
+        font-size: 12px;
     } 
 }
 

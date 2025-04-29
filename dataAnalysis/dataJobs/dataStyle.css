@@ -93,6 +93,7 @@ body {
     animation-fill-mode: forwards;
     opacity: 1;
     animation-delay: 3200ms;
+    width: 40px;
 }  
 
 .allContainer {
@@ -247,7 +248,7 @@ body {
 .imagesContainer p {
     font-size: 1.3rem;
     font-weight: 100;
-    color: #d0d6e0;
+    color: #d6d6d6;
     padding-bottom: 50px;
 }
 
@@ -314,6 +315,7 @@ body {
     width: 100%;
     overflow: auto;
     margin-top: auto;
+    font-style: italic;
 }
 
 .footericons {
@@ -328,7 +330,7 @@ body {
     width: 50px;
     height: 50px;
     background: transparent;
-    border: 1.5px solid #5e5e5e;
+    border: 1.5px solid #34343a;
     border-radius: 50%;
     font-size: 1.2rem;
     color: #fff;
@@ -559,6 +561,30 @@ body {
         height: 70px;
     }
 
+    .nav_container .smallLogo {
+        width: 24px;
+        left: 90px;
+    }
+
+    .allContainer {
+        padding-top: 120px;
+    }
+
+    .coverImageBorder::before, 
+    .coverImageBorder::after {
+        padding: 6px 6px;
+    }
+
+
+    .coverImageContainer::before, 
+    .coverImageContainer::after {
+        padding: 8px 8px;
+    }
+
+    .projectInfo {
+        margin: 0px 0px 50px 8.8%;
+    }
+
     .projectInfo h1{
         font-size: 2rem;
         font-weight: 100;
@@ -569,16 +595,31 @@ body {
         font-weight: 100;
     }
 
+    .image1Border::before, 
+    .image1Border::after {
+        padding: 6px 6px;
+}
+
+    .image1Containers::before, 
+    .image1Containers::after {
+        padding: 8px 8px;
+}
+
     .projectOverviewInfo {
         position: relative;    
         margin: 10px 0 0 100px;
     } 
+
+    .projectOverviewContainer {
+        margin: 50px 10% 50px 8.8%;
+    }
 
     .projectOverview h1 {
         font-size: 1.8rem;
     }
 
     .projectOverviewInfo p {
+        position: relative;
         font-size: 1rem;
     }
 
@@ -589,7 +630,7 @@ body {
     }
 
     .singleskill a {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .singleskill i {
@@ -597,16 +638,24 @@ body {
     }
 
     .projectOverviewInfo p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        line-height: 1.2;
     }
 
     .imagesContainer h1 {
+        position: relative;
         font-size: 1.8rem;
+        margin: 0 0 0 -12px;
+        padding-bottom: 20px;
     }
 
     
     .imagesContainer p {
-        font-size: 1rem;
+        position: relative;
+        left: -12px;
+        font-size: 0.8rem;
+        line-height: 1.1;
+        padding-bottom: 40px;
     }
 
     .footer {
@@ -617,10 +666,11 @@ body {
         width: 30px;
         height: 30px;
         font-size: 14px;
+        margin: 30px 5px 30px 0;
     }
 
     .footerinfo p {
-        font-size: 14px;
+        font-size: 12px;
     } 
 }
 
@@ -690,17 +740,11 @@ body {
 
 @media only screen and (min-width: 1920px){
 
-
-
     .nav_container {
         max-width: 1920px;
         width: 100%;
         margin: 0 auto;
     }
-
-    .nav_container .smallLogo {
-        width: 40px;
-    }  
     
     .allContainer {
         max-width: 1920px;
