@@ -63,7 +63,7 @@ body {
     left: 0%;
 }
 
-.foodApp {
+.dashboard {
     min-height: 200svh;
     color: #ffffff;
 }
@@ -97,6 +97,7 @@ body {
 
 .allContainer {
     padding-top: 150px;
+    padding-bottom: 100px;
 }
 
 .projectInfo {
@@ -110,6 +111,7 @@ body {
 .projectInfo h2 {
     font-size: 4rem;
     font-weight: 100;
+    color: #ffffff;
 }
 
 .projectInfo h2 {
@@ -185,6 +187,7 @@ body {
     font-size: 3rem;
     font-weight: 100;
     padding-bottom: 20px;
+    color: #ffffff;
 }
 
 .toolsInfo {
@@ -238,6 +241,7 @@ body {
     font-size: 3rem;
     font-weight: 100;
     padding-bottom: 50px;
+    color: #ffffff;
 }
 
 .image1Container {
@@ -293,6 +297,63 @@ body {
     width: min(80vw, 1500px); 
     height: auto; 
     object-fit: contain; 
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #08090b;
+    min-height: 200px;
+    border-top: 2px solid #161616;
+    width: 100%;
+    overflow: auto;
+    margin-top: auto;
+}
+
+.footericons {
+    position: relative;
+    text-align: center;
+}
+
+.footericons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 1.5px solid #5e5e5e;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    margin: 30px 10px 30px 0;
+    transition: 0.5s;
+}
+
+.footericons a:hover {
+    background-color: #ffffff;
+    color: #000;
+    box-shadow: 0 0 15px #fff;
+    border: 1.5px solid #ffffff;
+}
+
+.footericons a:hover i{
+    animation: rotate 0.5s linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+.footerinfo {
+    position: relative;
+    text-align: center;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footerinfo p {
+    color: #d0d6e0;
 }
 
 
@@ -301,6 +362,13 @@ body {
     .navbar {
         height: 40px;
     }
+
+    .nav_container .smallLogo {
+        left: 36px;
+        width: 20px;
+        font-size: 2rem;
+    }  
+    
 
     .allContainer {
         padding-top: 80px;
@@ -351,6 +419,20 @@ body {
 
     .imagesContainer h1 {
         font-size: 2rem;
+    }
+
+    .footer {
+        height: 150px;
+    }
+
+    .footericons a {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .footerinfo p {
+        font-size: 0.8rem;
     }
 }
 
@@ -458,12 +540,16 @@ body {
 @media only screen and (min-width: 1024px) and (max-width: 1919px){
     
     .navbar {
-        height: 60px;
+        height: 70px;
     }
 
-    .projectInfo h1,
-    .projectInfo h2 {
+    .projectInfo h1{
         font-size: 2rem;
+        font-weight: 100;
+    }
+
+    .projectInfo h2{
+        font-size: 1.4rem;
         font-weight: 100;
     }
 
@@ -473,7 +559,7 @@ body {
     } 
 
     .projectOverview h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .projectOverviewInfo p {
@@ -494,9 +580,27 @@ body {
         font-size: 1.5rem;
     }
 
-    .imagesContainer h1 {
-        font-size: 2rem;
+    .projectOverviewInfo p {
+        font-size: 0.9rem;
     }
+
+    .imagesContainer h1 {
+        font-size: 1.8rem;
+    }
+
+    .footer {
+        min-height: 150px;
+    }
+
+    .footericons a{
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .footerinfo p {
+        font-size: 14px;
+    } 
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1919px){
@@ -505,9 +609,12 @@ body {
         height: 80px;
     }
 
-    .projectInfo h1,
-    .projectInfo h2 {
+    .projectInfo h1 {
         font-size: 2.5rem;
+    }
+
+    .projectInfo h2 {
+        font-size: 1.8rem;
     }
 
     .projectOverviewInfo {
@@ -515,7 +622,7 @@ body {
     } 
 
     .projectOverview h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .singleskill {
@@ -533,12 +640,26 @@ body {
     }
 
     .projectOverviewInfo p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .imagesContainer h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
+
+    .footer {
+        min-height: 180px;
+    }
+
+    .footericons a{
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .footerinfo p {
+        font-size: 16px;
+    } 
 }
 
 @media only screen and (min-width: 1920px){
