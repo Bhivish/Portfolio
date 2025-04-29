@@ -661,7 +661,7 @@ body {
 @media only screen and (min-width: 1200px) and (max-width: 1919px){
 
     .navbar {
-        height: 70px;
+        height: 60px;
     }
 
     .nav_container .smallLogo {
@@ -669,11 +669,11 @@ body {
     }
 
     .projectInfo h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .projectInfo h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .projectOverviewInfo {
@@ -711,13 +711,13 @@ body {
     }
 
     .footericons a{
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         font-size: 16px;
     }
 
     .footerinfo p {
-        font-size: 16px;
+        font-size: 14px;
     } 
 }
 

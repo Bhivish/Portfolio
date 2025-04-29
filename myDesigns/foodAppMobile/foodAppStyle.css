@@ -648,6 +648,69 @@ body {
     } 
 }
 
+@media only screen and (min-width: 1200px) and (max-width: 1919px){
+
+    .navbar {
+        height: 60px;
+    }
+
+    .nav_container .smallLogo {
+        width: 32px;
+    }
+
+    .projectInfo h1 {
+        font-size: 2.5rem;
+    }
+
+    .projectInfo h2 {
+        font-size: 1.6rem;
+    }
+
+    .projectOverviewInfo {
+        margin: 10px 0 0 100px;
+    } 
+
+    .projectOverview h1 {
+        font-size: 2rem;
+    }
+
+    .singleskill {
+        height: 40px;
+        width: 220px;
+        padding: 0px 0px 0px 10px;
+    }
+
+    .singleskill a {
+        font-size: 1rem;
+    }
+
+    .singleskill i {
+        font-size: 1.5rem;
+    }
+
+    .projectOverviewInfo p {
+        font-size: 0.85rem;
+    }
+
+    .imagesContainer h1 {
+        font-size: 2rem;
+    }
+
+    .footer {
+        min-height: 180px;
+    }
+
+    .footericons a{
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .footerinfo p {
+        font-size: 14px;
+    } 
+}
+
 @media only screen and (min-width: 1440px) and (max-width: 1919px){
 
     .navbar {

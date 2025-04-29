@@ -2151,7 +2151,6 @@ span {
     .contact {
         min-height: 600px;
         margin: 0 auto;
-        max-width: 1200px;
     }
 
     .contactinfo {
@@ -2413,7 +2412,6 @@ span {
     .contact {
         min-height: 600px;
         margin: 0 auto;
-        max-width: 1200px;
     }
 
     .contactinfo {
@@ -2660,11 +2658,10 @@ span {
     .contact {
         min-height: 720px;
         margin: 0 auto;
-        max-width: 1440px;
+        width: 100%;
     }
 
     .contactinfo {
-        width: 800px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -2745,9 +2742,13 @@ span {
     }
 
     .contact {
-        max-width: 1920px;
         width: 100%;
         margin: 0 auto;
         min-height: 800px;
+    }
+
+    .contactinfo {
+        max-width: 1920px;
+        margin: 0 auto;
     }
 } 
