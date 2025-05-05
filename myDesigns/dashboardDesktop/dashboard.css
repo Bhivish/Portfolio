@@ -174,7 +174,7 @@ body {
     z-index: -1;
 }
 
-.coverImageContainer {
+/* .coverImageContainer {
     width: 100%; 
     display: flex;
     justify-content: center; 
@@ -188,6 +188,42 @@ body {
     height: auto; 
     object-fit: contain; 
     border-radius: 5px;
+} */
+
+.coverImageContainer {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #141517;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    animation: pulse 1s ease-in-out infinite;
+}
+  
+.coverImage {
+    width: min(80vw, 1500px); 
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    position: relative;
+    border-radius: 5px;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(20, 21, 23, 0.75);
+    }
+    50% {
+        background-color: rgba(20, 21, 23, 1);
+
+    }
+    100% {
+        background-color: rgba(20, 21, 23, 0.75);
+
+    }
 }
 
 .projectOverviewContainer {
@@ -281,6 +317,16 @@ body {
     z-index: -1;
 }
 
+.image1Containers {
+    aspect-ratio: 16 / 9;
+    background-color: #141517;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    animation: pulse 1s ease-in-out infinite;
+}
 
 .image1Containers::before, 
 .image1Containers::after {
@@ -298,7 +344,7 @@ body {
     z-index: -1;
 }
 
-.image1Container {
+/* .image1Container {
     width: 100%; 
     display: flex;
     justify-content: center; 
@@ -310,6 +356,24 @@ body {
     width: min(80vw, 1500px); 
     height: auto; 
     object-fit: contain; 
+    border-radius: 5px;
+} */
+
+.image1Container {
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-bottom: 50px;
+}
+  
+.image1 {
+    width: min(80vw, 1500px); 
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    position: relative;
     border-radius: 5px;
 }
 
