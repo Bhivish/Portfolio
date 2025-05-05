@@ -218,12 +218,14 @@ body {
     justify-content: space-between;
     gap: 1rem;
     margin: 50px 10% 50px 10%;
+    border-top: 2px solid #1d2024;
+
 }
 
 .projectOverview h1 {
     font-size: 3rem;
     font-weight: 100;
-    padding-bottom: 20px;
+    padding: 40px 0px 20px 0px;
     color: #ffffff;
 }
 
@@ -261,7 +263,7 @@ body {
 
 .projectOverviewInfo {
     position: relative;    
-    margin: 10px 0 0 200px;
+    margin: 50px 0 0 200px;
 }
 
 .projectOverviewInfo p {
@@ -671,7 +673,7 @@ body {
 
     .projectOverviewInfo {
         position: relative;    
-        margin: 10px 0 0 100px;
+        margin: 40px 0 0 100px;
     } 
 
     .projectOverviewContainer {
@@ -757,7 +759,7 @@ body {
     }
 
     .projectOverviewInfo {
-        margin: 10px 0 0 100px;
+        margin: 45px 0 0 100px;
     } 
 
     .projectOverview h1 {
@@ -820,7 +822,7 @@ body {
     }
 
     .projectOverviewInfo {
-        margin: 10px 0 0 100px;
+        margin: 45px 0 0 100px;
     } 
 
     .projectOverview h1 {
