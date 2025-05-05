@@ -185,7 +185,7 @@ body {
     align-items: center;
     position: relative;
     border-radius: 5px;
-    animation: pulse 1s ease-in-out infinite;
+    animation: pulse 2s ease-in-out infinite;
 }
   
 .coverImage {
@@ -313,7 +313,7 @@ body {
     align-items: center;
     position: relative;
     border-radius: 5px;
-    animation: pulse 1s ease-in-out infinite;
+    animation: pulse 2s ease-in-out infinite;
 }
 
 .image1Containers::before, 
