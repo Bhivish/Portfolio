@@ -184,7 +184,6 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    border-radius: 5px;
     animation: pulse 2s ease-in-out infinite;
 }
   
@@ -195,7 +194,6 @@ body {
     opacity: 0;
     transition: opacity 0.6s ease-in-out;
     position: relative;
-    border-radius: 5px;
 }
 
 @keyframes pulse {
@@ -312,7 +310,6 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    border-radius: 5px;
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -362,7 +359,6 @@ body {
     opacity: 0;
     transition: opacity 0.6s ease-in-out;
     position: relative;
-    border-radius: 5px;
 }
 
 .footer {
