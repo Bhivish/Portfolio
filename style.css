@@ -164,7 +164,7 @@ html.lenis body {
 }
 
 .navContainer {
-    border: 1px solid #21242b;
+    border-bottom: 1px solid #21242b;
     width: 100%;
     height: 80px;
     position: fixed;
@@ -1132,6 +1132,7 @@ html.lenis body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    border: 1px solid #23252a;
     padding: 2rem 10rem 2rem 5rem;
     background-color: #141414;
     border-radius: 5px;
