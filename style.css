@@ -25,13 +25,14 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-    background-color: #5e5e5e;
+    background-color: #3e3e3e;
     border-radius: 2px;
 }
 
 html::-webkit-scrollbar-track {
-    background-color: #34343a;
-    border-left: 1px solid #1e1f21;
+    background-color: #1d1d1d;
+    border-left: 1px solid #2c2c2c;
+
 }
 
 body {
@@ -150,7 +151,8 @@ html.lenis body {
     background-color: #141414;
 }
 
-.mainContainer {
+.mainContainer,
+.mainContainer2 {
     display: flex;
     flex-direction: column;
     gap: 250px;
@@ -239,7 +241,7 @@ html.lenis body {
 .sidebar {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -200%;
   width: 250px;
   height: 100vh;
   background-color: #21242b;
@@ -312,7 +314,7 @@ html.lenis body {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    background-color: #34343a;
+    background-color: #1d1d1d;
     width: 0%;
     height: 100%;
 }
@@ -541,7 +543,7 @@ html.lenis body {
 
 .image1Containers {
     aspect-ratio: 16 / 9;
-    background-color: #141517;
+    background-color: #141414;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -739,7 +741,10 @@ html.lenis body {
 .servicesInfoContainer h2,
 .upcomingProjectsContainer h2,
 .imageCarousel h2,
-.contactInfoContainer h2  {
+.contactInfoContainer h2,
+.projectInfo h2,
+.projectOverviewInfo h2,
+.imagesContainerInfo h2  {
     font-size: 1.5rem;
     color: #8A8F98;
     font-weight: 400;
@@ -753,7 +758,10 @@ html.lenis body {
 .servicesInfoContainer h1,
 .upcomingProjectsContainer h1,
 .imageCarousel h1,
-.contactInfoContainer h1  {
+.contactInfoContainer h1,
+.projectInfo h1,
+.projectOverviewInfo h1,
+.imagesContainerInfo h1  {
     font-size: 2.5rem;
     padding-top: 0.8rem;
     font-weight: 400;
@@ -1173,6 +1181,226 @@ html.lenis body {
 
 
 
+.mainContainer2 {
+    gap: 200px;
+}
+
+.coverHeroContainer {
+    color: #fff;
+    margin: 10rem 15rem 0rem 15rem;
+}
+
+.coverHeroContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.coverImageBorder {
+    position: relative;
+}
+
+.coverImageBorder::before, 
+.coverImageBorder::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #08090b;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    padding: 10px 10px;
+    z-index: -1;
+}
+
+
+.coverImageContainer::before, 
+.coverImageContainer::after {
+    position: absolute;
+    --angle: 235deg;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(from var(--angle), #08090b, #1d2024, #08090b, #08090b);
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    padding: 12px 12px;
+    z-index: -1;
+}
+
+.coverImageContainer {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: pulse 1s ease-in-out infinite;
+}
+  
+.coverImage {
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    position: relative;
+}
+
+.coverImage2 {
+    border-radius: 0;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(20, 21, 23, 0.75);
+    }
+    50% {
+        background-color: rgba(20, 21, 23, 1);
+
+    }
+    100% {
+        background-color: rgba(20, 21, 23, 0.75);
+
+    }
+}
+
+
+
+
+.projectOverviewContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    color: #fff;
+    margin: 0rem 15rem 0rem 15rem;
+
+}
+
+.projectOverviewInfoContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.projectOverview {
+    flex: 1;
+}
+
+.toolsInfo {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.projectOverviewPara {
+    flex: 1;
+}
+
+.projectOverviewPara p {
+    font-size: 1rem;
+    color: #8A8F98;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+
+
+.mockupsContainer {
+    color: #fff;
+    margin: 0rem 15rem 0rem 15rem;
+
+}
+
+.image1Container {
+    display: flex;
+    justify-content: center;
+}
+
+.imagesContainer {
+    margin-top: 2rem;
+}
+
+.image1Border {
+    position: relative;
+}
+
+.image1Border::before, 
+.image1Border::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #08090b;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    padding: 10px 10px;
+    z-index: -1;
+}
+
+.image1Containers {
+    aspect-ratio: 16 / 9;
+    background-color: #141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.image1Containers::before, 
+.image1Containers::after {
+    position: absolute;
+    --angle: 235deg;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(from var(--angle), #08090b, #1d2024, #08090b, #08090b);
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    padding: 12px 12px;
+    z-index: -1;
+}
+
+.image1Container {
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-bottom: 50px;
+}
+  
+.image1 {
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    position: relative;
+    border-radius: 10px;
+}
+
+.image1_2 {
+    border-radius: 0;
+}
+
+
+
+
+
 
 
 @media only screen and (min-width: 0px) and (max-width: 1199px){
@@ -1190,18 +1418,13 @@ html.lenis body {
         margin: 2rem;
     }  
 
-    .logo-header #mylogo {
-        width: 200px;
-        height: 200px;
-    }
-
     .openButton {
         display: block;
         position: absolute;
         font-size: 30px;
         right: 2rem;
         color: white;
-        cursor: none;
+        cursor: pointer;
     }
 
     .home {
@@ -1295,7 +1518,10 @@ html.lenis body {
     .servicesInfoContainer h2,
     .upcomingProjectsContainer h2,
     .imageCarousel h2,
-    .contactInfoContainer h2  {
+    .contactInfoContainer h2,
+    .projectInfo h2,
+    .projectOverviewInfo h2,
+    .imagesContainerInfo h2  {
         font-size: 1.2rem;
         padding: 0 0 0 1rem;
     }
@@ -1308,7 +1534,10 @@ html.lenis body {
     .servicesInfoContainer h1,
     .upcomingProjectsContainer h1,
     .imageCarousel h1,
-    .contactInfoContainer h1  {
+    .contactInfoContainer h1,
+    .projectInfo h1,
+    .projectOverviewInfo h1,
+    .imagesContainerInfo h1  {
         font-size: 1.4rem;
         padding-top: 0.8rem;
     }
@@ -1508,6 +1737,33 @@ html.lenis body {
         width: 2rem;
         margin-bottom: 2rem;
     }
+
+    .mainContainer2 {
+        gap: 150px;
+    }
+
+    .coverHeroContainer {
+        margin: 10rem 2rem 0rem 2rem;
+    }
+
+    .projectOverviewContainer,
+    .mockupsContainer {
+        margin: 0rem 2rem 0rem 2rem;
+    }
+
+    .projectOverviewInfoContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .toolsInfo {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .projectOverviewPara p {
+        font-size: 0.9rem;
+    }    
 }   
 
 @media only screen and (min-width: 425px) and (max-width: 1199px){
@@ -1517,10 +1773,6 @@ html.lenis body {
         margin: 3rem;
     }  
 
-    .logo-header #mylogo {
-        width: 250px;
-        height: 250px;
-    }
     .openButton {
         font-size: 30px;
         right: 3rem;
@@ -1592,6 +1844,20 @@ html.lenis body {
     .footerInfo {
         margin: 2rem 3rem;  
     }
+
+    .coverHeroContainer {
+        margin: 10rem 3rem 0rem 3rem;
+    }
+
+    .projectOverviewContainer,
+    .mockupsContainer {
+        margin: 0rem 3rem;
+    }
+
+
+    .toolsInfo {
+        grid-template-columns: repeat(1, 350px);
+    }
 } 
 
 @media only screen and (min-width: 600px) and (max-width: 1199px){
@@ -1607,7 +1873,7 @@ html.lenis body {
     }
 
     .home {
-        margin: 10rem 4rem 0rem 4rem;
+        margin: 10rem 3rem 0rem 3rem;
     }  
     
     .aboutImageContainer {
@@ -1685,17 +1951,12 @@ html.lenis body {
         font-size: 4rem;
     }
 
-    .logo-header #mylogo {
-        width: 300px;
-        height: 300px;
-    }
-
     .processBoxContainer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-content: space-evenly;
         gap: 2rem 3rem;
-       margin: 4rem auto;
+        margin: 4rem auto;
         max-width: fit-content;
     }
 
@@ -1724,6 +1985,20 @@ html.lenis body {
         color: #8A8F98;
         font-size: 0.9rem;
     }
+
+    .coverHeroContainer {
+        margin: 10rem 3rem 0rem 3rem;
+    }
+
+    .projectOverviewContainer,
+    .mockupsContainer {
+        margin: 0rem 3rem;
+    }
+
+    .toolsInfo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 } 
 
 @media only screen and (min-width: 1024px) and (max-width: 1199px){
@@ -1732,11 +2007,6 @@ html.lenis body {
         width: 30px;
         margin: 5rem;
     }  
-
-    .logo-header #mylogo {
-        width: 350px;
-        height: 350px;
-    }
 
     .openButton {
         right: 4rem;
@@ -1803,7 +2073,10 @@ html.lenis body {
     .servicesInfoContainer h2,
     .upcomingProjectsContainer h2,
     .imageCarousel h2,
-    .contactInfoContainer h2  {
+    .contactInfoContainer h2,
+    .projectInfo h2,
+    .projectOverviewInfo h2,
+    .mockupsContainer h2  {
         font-size: 1.2rem;
         padding: 0 0 0 1rem;
     }
@@ -1816,7 +2089,10 @@ html.lenis body {
     .servicesInfoContainer h1,
     .upcomingProjectsContainer h1,
     .imageCarousel h1,
-    .contactInfoContainer h1  {
+    .contactInfoContainer h1,
+    .projectInfo h1,
+    .projectOverviewInfo h1,
+    .mockupsContainer h1  {
         font-size: 1.8rem;
         padding-top: 0.8rem;
     }
@@ -1986,6 +2262,23 @@ html.lenis body {
         width: 2rem;
         margin-bottom: 2rem;
     }
+
+    .coverHeroContainer {
+        margin: 10rem 5rem 0rem 5rem;
+    }
+
+    .projectOverviewContainer,
+    .mockupsContainer {
+        margin: auto 5rem;
+    }
+
+    .toolsInfo {
+        grid-template-columns: repeat(2, 350px);
+    }
+
+    .projectOverviewPara p {
+        font-size: 1rem;
+    }  
 }  
 
 @media only screen and (min-width: 1200px) and (max-width: 1919px){
@@ -1993,11 +2286,6 @@ html.lenis body {
     .nav_menu {
         gap: 4rem;
         margin: auto 6rem;
-    }
-
-    .logo-header #mylogo {
-        width: 380px;
-        height: 380px;
     }
 
     .navbar .smallLogo {
@@ -2046,7 +2334,10 @@ html.lenis body {
     .servicesInfoContainer h2,
     .upcomingProjectsContainer h2,
     .imageCarousel h2,
-    .contactInfoContainer h2  {
+    .contactInfoContainer h2,
+    .projectInfo h2,
+    .projectOverviewInfo h2,
+    .mockupsContainer h2  {
         font-size: 1.4rem;
         padding: 0 0 0 1rem;
     }
@@ -2059,7 +2350,10 @@ html.lenis body {
     .servicesInfoContainer h1,
     .upcomingProjectsContainer h1,
     .imageCarousel h1,
-    .contactInfoContainer h1  {
+    .contactInfoContainer h1,
+    .projectInfo h1,
+    .projectOverviewInfo h1,
+    .mockupsContainer h1  {
         font-size: 2rem;
         padding-top: 0.8rem;
     }
@@ -2204,7 +2498,7 @@ html.lenis body {
 
     .swiper {
         width: 90%;
-        height: 350px;
+        height: 400px;
     }
 
     .workProjects {
@@ -2251,6 +2545,33 @@ html.lenis body {
         margin-top: 2rem;
     }
 
+     .mainContainer2 {
+        gap: 150px;
+    }
+
+    .coverHeroContainer {
+        margin: 10rem 10rem 0rem 10rem;
+    }
+
+    .projectOverviewContainer,
+    .mockupsContainer {
+        margin: 0rem 10rem;
+    }
+
+    .projectOverviewInfoContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .toolsInfo {
+        grid-template-columns: repeat(2, 350px);
+    }
+
+    .projectOverviewPara p {
+        font-size: 0.9rem;
+    }        
+
 
 } 
 
@@ -2259,11 +2580,6 @@ html.lenis body {
     .nav_menu {
         gap: 4rem;
         margin: auto 6rem;
-    }
-
-    .logo-header #mylogo {
-        width: 420px;
-        height: 420px;
     }
 
     .navbar .smallLogo {
@@ -2312,7 +2628,10 @@ html.lenis body {
     .servicesInfoContainer h2,
     .upcomingProjectsContainer h2,
     .imageCarousel h2,
-    .contactInfoContainer h2  {
+    .contactInfoContainer h2,
+    .projectInfo h2,
+    .projectOverviewInfo h2,
+    .mockupsContainer h2  {
         font-size: 1.5rem;
         padding: 0 0 0 1rem;
     }
@@ -2325,7 +2644,10 @@ html.lenis body {
     .servicesInfoContainer h1,
     .upcomingProjectsContainer h1,
     .imageCarousel h1,
-    .contactInfoContainer h1  {
+    .contactInfoContainer h1,
+    .projectInfo h1,
+    .projectOverviewInfo h1,
+    .mockupsContainer h1  {
         font-size: 2.4rem;
         padding-top: 0.8rem;
     }
@@ -2471,7 +2793,7 @@ html.lenis body {
 
     .swiper {
         width: 90%;
-        height: 350px;
+        height: 450px;
     }
 
     .workProjects {
@@ -2517,6 +2839,29 @@ html.lenis body {
     .homeContactInfoContainer {
         margin-top: 2rem;
     }
+
+     .mainContainer2 {
+        gap: 150px;
+    }
+
+    .coverHeroContainer {
+        margin: 10rem 10rem 0rem 10rem;
+    }
+
+    .projectOverviewContainer,
+    .mockupsContainer {
+        margin: 0rem 10rem;
+    }
+
+    .projectOverviewInfoContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .projectOverviewPara p {
+        font-size: 1rem;
+    }    
 
 } 
 
@@ -2604,4 +2949,22 @@ html.lenis body {
         max-width: 1440px;
         margin: 10rem auto 0rem auto;   
     }   
+
+    .coverHeroContainer {
+        width: 100%;
+        max-width: 1440px;
+        margin: 10rem auto 0rem auto;   
+    }
+
+    .projectOverviewContainer {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;    
+    }
+
+    .mockupsContainer {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto; 
+    }
 } 
