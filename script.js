@@ -1,53 +1,52 @@
-const body = document.body;
 
-if (body.id === "homePage") {
+anime({
+  targets: '#mylogo path',
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: 'easeInOutSine',
+  duration: 2500,
+  delay: (el, i) => i * 250,
+  direction: 'alternate',
+  loop: false
+});
 
-  anime({
-    targets: '#mylogo path',
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'easeInOutSine',
-    duration: 2500,
-    delay: (el, i) => i * 250,
-    direction: 'alternate',
-    loop: false
-  });
-
-    const intro = document.querySelector('.intro');
-  const introShown = sessionStorage.getItem('introShown');
-
-  function hideIntro() {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        intro.style.top = '-100%';
-        sessionStorage.setItem('introShown', 'true');
-        resolve();
-      }, 3000);
-    });
-  }
-
-  async function runIntroOnce() {
-    if (intro && (!introShown || performance.navigation.type === performance.navigation.TYPE_RELOAD)) {
-      await hideIntro();
-    } else {
-      intro.style.display = 'none';
-    }
-  }
-
-  window.addEventListener('DOMContentLoaded', runIntroOnce);
-
-  window.addEventListener('popstate', () => {
-    if (intro) intro.style.display = 'none';
-  });
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+async function hideIntro() {
+  const intro = document.querySelector('.intro');
+  if (!intro) return;
+  intro.style.top = '0'; 
+  await delay(2500);
+  await delay(1000);
+  intro.style.top = '-100%';
+}
 
+async function startAnimations() {
+  const intro = document.querySelector('.intro');
+  const introShown = sessionStorage.getItem('introShown');
+
+  if (intro && !introShown) {
+    await hideIntro();
+    sessionStorage.setItem('introShown', 'true');
+  } else if (intro) {
+    intro.style.display = 'none';
+  }
+
+  const animatedElements = document.querySelectorAll('.animate');
+  animatedElements.forEach(el => {
+    el.classList.remove('in-views', 'animated');
+    void el.offsetWidth;
+    el.classList.add('in-views', 'animated');
+  });
+} 
 
 
 
 
 function initCustomCursor() {
   const customCursor = document.querySelector('.customCursor');
-  if (!customCursor) return; // In case the element is not on the page
+  if (!customCursor) return;
 
   const circleStyle = customCursor.style;
 
@@ -67,31 +66,24 @@ function initCustomCursor() {
       effect.remove();
     });
   });
-}
-
+  }
 window.initCustomCursor = initCustomCursor;
-// initCustomCursor();
-
-
 
 
 
 
 function initNavbar() {
   if (window._navbarInitialized) return;
-
   window.addEventListener('scroll', () => {
     document.querySelector(".navContainer")?.classList.toggle(
       'window-scroll',
       window.scrollY > 0
     );
   });
-
   window._navbarInitialized = true; 
 }
-
 window.initNavbar = initNavbar;
-// initNavbar();
+
 
 
 
@@ -130,10 +122,7 @@ function swiperCarousel() {
     }
   });
 }
-
 window.swiperCarousel = swiperCarousel;
-// swiperCarousel();
-
 
 
 
@@ -157,7 +146,6 @@ function showImageWhenReady() {
       }
     });
   
-    // Handle coverImage images
     coverImageImages.forEach((img) => {
       const container = img.closest('.coverImageContainer'); 
       
@@ -174,77 +162,26 @@ function showImageWhenReady() {
         });
       }
     });
-  }
-  
-  window.addEventListener("pageshow", showImageWhenReady); 
-  document.addEventListener("DOMContentLoaded", showImageWhenReady);
-  window.showImageWhenReady = showImageWhenReady;
-
-
-
+}
+window.addEventListener("pageshow", showImageWhenReady); 
+document.addEventListener("DOMContentLoaded", showImageWhenReady);
+window.showImageWhenReady = showImageWhenReady;
 
 
 
 
 function smoothScroll() {
   const lenis = new Lenis();
-
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
   }
-
   requestAnimationFrame(raf);
 }
-
 window.smoothScroll = smoothScroll; 
-// smoothScroll();
 
 
 
-
-// Origninal InitNavMenu
-
-// function initNavMenu() {
-//   const openBtn = document.querySelector('.openButton');
-//   const closeBtn = document.querySelector('.closeButton');
-//   const sidebar = document.querySelector('.sidebar');
-
-//     if (!openBtn || !closeBtn || !sidebar) {
-//     console.log('One or more elements missing:', { openBtn, closeBtn, sidebar });
-//     return;
-//   }
-
-//   if (openBtn && closeBtn && sidebar) {
-//     openBtn.addEventListener('click', () => {
-//       sidebar.classList.add('open');
-//     });
-
-//     closeBtn.addEventListener('click', () => {
-//       sidebar.classList.remove('open');
-//     });
-//   }
-
-//   const allLinks = document.querySelectorAll('.nav_menu a, .sidebar a');
-
-//   if (allLinks.length) {
-//     allLinks.forEach(link => {
-//       link.addEventListener('click', () => {
-//         allLinks.forEach(l => l.classList.remove('active'));
-//         link.classList.add('active');
-//         if (sidebar) sidebar.classList.remove('open');
-//       });
-//     });
-//   }
-// }
-
-// window.initNavMenu = initNavMenu;
-// initNavMenu();
-
-
-
-
-// ////////////////////////////////////////////////////////////////  Working Barba JS
 
 function delay(n) {
   return new Promise(done => setTimeout(done, n || 2000));
@@ -300,10 +237,12 @@ function initNavMenu() {
     }
   });
 }
-
 window.initNavMenu = initNavMenu;
 
 $(function () {
+  if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+    sessionStorage.removeItem('introShown');
+  }
   initNavMenu();  
 
   barba.init({
@@ -313,7 +252,7 @@ $(function () {
         async leave() {
           const done = this.async();
           pageTransition();
-          await delay(1000);
+          await delay(1200);
           done();
         },
         async afterEnter() {
@@ -324,27 +263,13 @@ $(function () {
           if (window.showImageWhenReady) showImageWhenReady();
           if (window.smoothScroll) smoothScroll();
           if (window.swiperCarousel) swiperCarousel();
-
-          // gsap.set('.slide-in', {
-          //   opacity: 0,
-          //   y: 50,
-          //   filter: 'blur(3px)'
-          // });
-
-          // await new Promise(resolve => setTimeout(resolve, 800));
-
-          // gsap.to('.slide-in', {
-          //   opacity: 1,
-          //   y: 0,
-          //   filter: 'blur(0px)',
-          //   duration: 1,
-          //   ease: 'power2.out',
-          //   stagger: 0.1
-          // });
+          await startAnimations(); 
         }
       }
     ]
   });
+
+  startAnimations();
 
   if (window.initCustomCursor) initCustomCursor();
   if (window.initNavbar) initNavbar();
@@ -356,77 +281,4 @@ $(function () {
 
 });
 
-
-
-// function delay(n) {
-//   return new Promise(done => {
-//     setTimeout(done, n || 2000);
-//   });
-// }
-
-// function pageTransition() {
-//   const tl = gsap.timeline();
-//   tl.to(".loading-screen", {
-//     duration: 1.2,
-//     width: "100%",
-//     left: "0%",
-//     ease: "Expo.easeInOut",
-//   });
-
-//   tl.to(".loading-screen", {
-//     duration: 1,
-//     width: "100%",
-//     left: "100%",
-//     ease: "Expo.easeInOut",
-//     delay: 0.3,
-//   });
-//   tl.set(".loading-screen", { left: "-100%" });
-// }
-
-// $(function () {
-//   barba.init({
-//     sync: true,
-//     transitions: [
-//       {
-//         async leave(data) {
-//           const done = this.async();
-//           pageTransition();
-//           await delay(1000);
-//           done();
-//         },
-// async afterEnter(data) {
-//     if (window.initCustomCursor) initCustomCursor();
-//     if (window.initNavbar) initNavbar();
-//     if (window.initSidebar) initSidebar();
-//     if (window.initNavMenu) initNavMenu();
-
-
-//   gsap.set('.slide-in', {
-//     opacity: 0,
-//     y: 50,
-//     filter: 'blur(3px)'
-//   });
-
-//   await new Promise(resolve => setTimeout(resolve, 800)); 
-
-
-//   gsap.to('.slide-in', {
-//     opacity: 1,
-//     y: 0,
-//     filter: 'blur(0px)',
-//     duration: 1,
-//     ease: 'power2.out',
-//     stagger: 0.1
-//   });
-// }
-//       }
-//     ]
-//   });
-
-//   if (window.initCustomCursor) initCustomCursor();
-//   if (window.initNavbar) initNavbar();
-//     if (window.initSidebar) initSidebar();
-//     if (window.initNavMenu) initNavMenu();
-
-// });
 
