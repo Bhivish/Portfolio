@@ -183,6 +183,31 @@ window.smoothScroll = smoothScroll;
 
 
 
+function initDropDown() {
+  document.querySelectorAll('.dropdownMenu1Container').forEach(container => {
+    container.addEventListener('click', () => {
+      const dropdown = container.nextElementSibling;
+
+      if (dropdown.classList.contains('open')) {
+        dropdown.classList.add('fast-close');
+        dropdown.classList.remove('open');
+
+        setTimeout(() => {
+          dropdown.classList.remove('fast-close');
+        }, 250); 
+      } else {
+        dropdown.classList.remove('fast-close');
+
+        dropdown.classList.add('open');
+      }
+    });
+  });
+}
+
+
+
+
+
 function delay(n) {
   return new Promise(done => setTimeout(done, n || 2000));
 }
@@ -262,6 +287,7 @@ $(function () {
           if (window.initSidebar) initSidebar();
           if (window.showImageWhenReady) showImageWhenReady();
           if (window.smoothScroll) smoothScroll();
+          if (window.initDropDown) initDropDown();
           if (window.swiperCarousel) swiperCarousel();
           await startAnimations(); 
         }
@@ -276,6 +302,7 @@ $(function () {
   if (window.initSidebar) initSidebar();
   if (window.smoothScroll) smoothScroll();
   if (window.swiperCarousel) swiperCarousel();
+  if (window.initDropDown) initDropDown();
   if (window.showImageWhenReady) showImageWhenReady();
 
 

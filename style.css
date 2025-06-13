@@ -732,7 +732,8 @@ html.lenis body {
 .contactInfoContainer h2,
 .projectInfo h2,
 .projectOverviewInfo h2,
-.imagesContainerInfo h2  {
+.imagesContainerInfo h2,
+.myApproachInfoContainer h2  {
     font-size: 1.5rem;
     color: #8A8F98;
     font-weight: 400;
@@ -749,7 +750,8 @@ html.lenis body {
 .contactInfoContainer h1,
 .projectInfo h1,
 .projectOverviewInfo h1,
-.imagesContainerInfo h1  {
+.imagesContainerInfo h1,
+.myApproachInfoContainer h1  {
     font-size: 2.5rem;
     padding-top: 0.8rem;
     font-weight: 400;
@@ -934,7 +936,87 @@ html.lenis body {
 
 
 
-.processContainer {
+
+.myApproach {
+    margin: 0 15rem;
+    color: #fff;
+}
+
+.myApproachContainer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.myApproachContainer1 {
+    display: flex;
+    gap: 5rem;
+}
+
+.dropdownMenu1 {
+    flex: 1;
+}
+
+.dropdownMenu1Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem; 
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #1d2024;
+    flex-wrap: nowrap;
+}
+
+.dropdownMenu1SubContainer {
+    display: flex;
+}
+
+.dropdownMenu1Container .number1 {
+    font-size: 2rem;
+    color: #1d1e20;
+    font-weight: 600;
+}
+
+.dropdown-title {
+    text-align: start;
+    cursor: none;
+    font-size: 1.2rem;
+    background-color: #08090b;
+    color: #C4C7CE;
+    border: none;
+    width: 100%;
+    font-weight: 600;
+    font-family: open sans;
+}
+
+.dropdownMenu1Container .bx-chevron-down {
+    font-size: 1.2rem;
+    color: #C4C7CE;
+}
+
+.dropdown-content {
+    max-height: 0;
+    color: #8A8F98;
+    margin: 1rem 1.3rem;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 2s ease, opacity 1s ease;
+}
+
+.dropdown-content.open {
+    max-height: 500px;  
+    opacity: 1;
+}
+
+.dropdown-content.fast-close {
+    transition: max-height 1s ease, opacity 0.2s ease !important;
+}
+
+
+
+
+/* .processContainer {
     color: #fff;
     margin: auto 15rem;
 }
@@ -965,10 +1047,10 @@ html.lenis body {
     transform: scale(1.10);
 }
 
-/* .processBoxContainer .processBox:nth-child(2),
+ .processBoxContainer .processBox:nth-child(2),
 .processBoxContainer .processBox:nth-child(4) {
     transform: rotate(-3deg);
-}  */
+}  
 
 .processBoxContainer .processBox:nth-child(2):hover,
 .processBoxContainer .processBox:nth-child(4):hover {
@@ -1006,7 +1088,7 @@ html.lenis body {
 .innerProcessBox p {
     color: #8A8F98;
     font-size: 0.9rem;
-}
+} */
 
 
 
@@ -1035,13 +1117,13 @@ html.lenis body {
 }
 
 .swiper-slide {
-    opacity: 0.2;
     transform: scale(0.8);
     transition: all 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: none;
+    filter: grayscale(100%);
 }
 
 .swiper-slide img {
@@ -1054,10 +1136,10 @@ html.lenis body {
 }
 
 .swiper-slide.swiper-slide-active {
-    opacity: 1;
     transform: scale(1.1);
     z-index: 10; 
     cursor: none;
+    filter: none;
 }
 
 
@@ -1570,7 +1652,8 @@ html.lenis body {
     .contactInfoContainer h2,
     .projectInfo h2,
     .projectOverviewInfo h2,
-    .imagesContainerInfo h2  {
+    .imagesContainerInfo h2,
+    .myApproachInfoContainer h2  {
         font-size: 1.2rem;
         padding: 0 0 0 1rem;
     }
@@ -1586,7 +1669,8 @@ html.lenis body {
     .contactInfoContainer h1,
     .projectInfo h1,
     .projectOverviewInfo h1,
-    .imagesContainerInfo h1  {
+    .imagesContainerInfo h1,
+    .myApproachInfoContainer h1  {
         font-size: 1.4rem;
         padding-top: 0.8rem;
     }
@@ -1623,6 +1707,37 @@ html.lenis body {
 
     .processContainer {
         margin: auto 2rem;
+    }
+
+    .myApproach {
+        margin: auto 2rem;  
+    }
+
+    .myApproachContainer1 {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .dropdownMenu1Container {
+        gap: 25px;
+    }
+
+    .dropdownMenu1Container .number1 {
+        font-size: 1.5rem;
+    }
+
+    .dropdown-title {
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    .dropdown-content p {
+        font-size: 0.9rem;
+    }
+
+    .number1 {
+        font-size: 1rem;
+        padding-left: 0;
     }
 
     .processBoxContainer {
@@ -1853,6 +1968,10 @@ html.lenis body {
         margin: auto 3rem;
     }
 
+    .myApproach {
+        margin: auto 3rem;
+    }
+
     .imageCarousel {
         margin: 0rem 3rem 0rem 3rem;
     }
@@ -1954,6 +2073,10 @@ html.lenis body {
         max-width: fit-content;
     }
 
+    .myApproach {
+        margin: auto 3rem;
+    }
+
     /* --------------------------------------------- */
     /* --------------------------------------------- */
     /* ----------------- Work Page ----------------- */
@@ -2007,6 +2130,10 @@ html.lenis body {
         gap: 2rem 3rem;
         margin: 4rem auto;
         max-width: fit-content;
+    }
+
+    .myApproachContainer1 {
+        flex-direction: row;
     }
 
     .processBox {
@@ -2125,7 +2252,8 @@ html.lenis body {
     .contactInfoContainer h2,
     .projectInfo h2,
     .projectOverviewInfo h2,
-    .mockupsContainer h2  {
+    .mockupsContainer h2,
+    .myApproachInfoContainer h2  {
         font-size: 1.2rem;
         padding: 0 0 0 1rem;
     }
@@ -2141,7 +2269,8 @@ html.lenis body {
     .contactInfoContainer h1,
     .projectInfo h1,
     .projectOverviewInfo h1,
-    .mockupsContainer h1  {
+    .mockupsContainer h1,
+    .myApproachInfoContainer h1  {
         font-size: 1.8rem;
         padding-top: 0.8rem;
     }
@@ -2153,6 +2282,14 @@ html.lenis body {
 
     .eachNumberDetails h1 {
         font-size: 1rem;
+    }
+
+    .myApproach {
+        margin: 0 5rem;
+    }
+
+    .dropdown-content p {
+        font-size: 0.9rem;
     }
 
     .processBoxContainer {
@@ -2386,7 +2523,8 @@ html.lenis body {
     .contactInfoContainer h2,
     .projectInfo h2,
     .projectOverviewInfo h2,
-    .mockupsContainer h2  {
+    .mockupsContainer h2,
+    .myApproachInfoContainer h2  {
         font-size: 1.4rem;
         padding: 0 0 0 1rem;
     }
@@ -2402,7 +2540,8 @@ html.lenis body {
     .contactInfoContainer h1,
     .projectInfo h1,
     .projectOverviewInfo h1,
-    .mockupsContainer h1  {
+    .mockupsContainer h1,
+    .myApproachInfoContainer h1  {
         font-size: 2rem;
         padding-top: 0.8rem;
     }
@@ -2490,6 +2629,15 @@ html.lenis body {
 
     .processContainer {
         margin: auto 8rem;
+    }
+
+    
+    .myApproach {
+        margin: auto 8rem;  
+    }
+
+    .dropdownMenu1Container {
+        gap: 25px;
     }
 
     .processBoxContainer {
@@ -2680,7 +2828,8 @@ html.lenis body {
     .contactInfoContainer h2,
     .projectInfo h2,
     .projectOverviewInfo h2,
-    .mockupsContainer h2  {
+    .mockupsContainer h2,
+    .myApproachInfoContainer h2  {
         font-size: 1.5rem;
         padding: 0 0 0 1rem;
     }
@@ -2696,7 +2845,8 @@ html.lenis body {
     .contactInfoContainer h1,
     .projectInfo h1,
     .projectOverviewInfo h1,
-    .mockupsContainer h1  {
+    .mockupsContainer h1,
+    .myApproachInfoContainer h1  {
         font-size: 2.4rem;
         padding-top: 0.8rem;
     }
@@ -2785,6 +2935,11 @@ html.lenis body {
     .processContainer {
         margin: auto 8rem;
     }
+
+    .myApproach {
+        margin: auto 8rem;  
+    }
+
 
     .processBoxContainer {
         display: grid;
@@ -2991,6 +3146,12 @@ html.lenis body {
         width: 100%;
         max-width: 1440px;
         margin: 10rem auto 0rem auto;   
+    }
+
+    .myApproach {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;  
     }
 
     .contactContainer {
