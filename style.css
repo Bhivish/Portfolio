@@ -666,6 +666,19 @@ html.lenis body {
     gap: 1.5rem;
 }
 
+.socialLinksIcons {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.socialLinksIcons .bxl-linkedin,
+.socialLinksIcons .bxl-github {
+    color: #8A8F98;
+    font-size: 1.5rem;
+}
+
 .quickLinks h1,
 .socialLinks h1 {
     color: #ffffff;
@@ -1208,18 +1221,30 @@ html.lenis body {
 .emailContainer {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     border: 1px solid #23252a;
     padding: 2rem 10rem 2rem 5rem;
     background-color: #141414;
     border-radius: 5px;
 }
 
+.emailInfoIcon {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.emailInfoIcon .bx-envelope,
+.emailInfoIcon .bx-phone-call {
+    color: #8A8F98;
+    font-size: 1.5rem;
+}
+
 .emailInfoContainer h3,
 .phoneInfoContainer h3{
     color: #8A8F98;
     font-weight: 400;
-    margin-bottom: 0.5rem;
 }
 
 .emailInfoContainer a {
@@ -1549,6 +1574,11 @@ html.lenis body {
         margin: 2rem;
     }  
 
+    .logo-header #mylogo {
+        width: 200px;
+        height: 200px;
+    }
+
     .openButton {
         display: block;
         position: absolute;
@@ -1845,7 +1875,6 @@ html.lenis body {
     .emailInfoContainer h3,
     .phoneInfoContainer h3{
         font-size: 0.9rem;
-        margin-bottom: 0.3rem;
     }
 
     .homeContact {
@@ -2035,6 +2064,11 @@ html.lenis body {
         margin: 3rem;
     }  
 
+    .logo-header #mylogo {
+        width: 250px;
+        height: 250px;
+    }
+
     .openButton {
         font-size: 30px;
         right: 2.5rem;
@@ -2119,6 +2153,11 @@ html.lenis body {
 
 @media only screen and (min-width: 768px) and (max-width: 1199px){
 
+    .logo-header #mylogo {
+        width: 300px;
+        height: 300px;
+    }
+
     .mobileHeroContainer h1 {
         font-size: 4rem;
     }
@@ -2178,6 +2217,11 @@ html.lenis body {
 } 
 
 @media only screen and (min-width: 1024px) and (max-width: 1199px){
+
+    .logo-header #mylogo {
+        width: 350px;
+        height: 350px;
+    }
 
     .navbar .smallLogo {
         width: 30px;
@@ -2392,7 +2436,6 @@ html.lenis body {
     .emailInfoContainer h3,
     .phoneInfoContainer h3{
         font-size: 0.9rem;
-        margin-bottom: 0.3rem;
     }
 
     .homeContact {
@@ -2468,6 +2511,11 @@ html.lenis body {
 }  
 
 @media only screen and (min-width: 1200px) and (max-width: 1919px){
+
+    .logo-header #mylogo {
+        width: 380px;
+        height: 380px;
+    }
 
     .nav_menu {
         gap: 4rem;
