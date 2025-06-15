@@ -1108,7 +1108,6 @@ html.lenis body {
 
 
 
-
 .imageCarousel {
     color: #fff;
     margin: auto 15rem;
@@ -1116,12 +1115,43 @@ html.lenis body {
 
 .imageCarousel p {
     font-size: 1rem;
-    margin: 1rem 0 4rem 0;
+    margin: 1rem 0 3rem 0;
     color: #8A8F98;
     line-height: 1.5;
 }
 
-.swiper {
+
+
+
+
+.image-track-wrapper {
+    display: flex;
+    align-items: center;  
+    justify-content: flex-start;
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+#image-track {
+    display: flex;
+    gap: 3vmin;
+    user-select: none;
+    will-change: transform;
+    position: absolute;
+    left: 0%; 
+}
+
+#image-track > .image {
+    width: 40vmin;
+  overflow: hidden;         
+  display: block;            
+    object-fit: cover;
+    object-position: 100% center;
+    flex-shrink: 0;
+}
+
+/* .swiper {
     width: 90%;
     max-width: 1300px;
     height: 500px;
@@ -1173,7 +1203,7 @@ html.lenis body {
     content: '';  
     color: #18f98f;
     cursor: none;
-}
+} */
 
 
 
@@ -1821,7 +1851,11 @@ html.lenis body {
 
     .imageCarousel p {
         font-size: 0.9rem;
-        margin: 1rem 0 4rem 0;
+        margin: 1rem 0 2rem 0;
+    }
+
+    .image-track-wrapper {
+        min-height: 170px;
     }
 
     .swiper {
@@ -2001,6 +2035,10 @@ html.lenis body {
         margin: auto 3rem;
     }
 
+    .image-track-wrapper {
+        min-height: 250px;
+    }
+
     .imageCarousel {
         margin: 0rem 3rem 0rem 3rem;
     }
@@ -2111,6 +2149,10 @@ html.lenis body {
         margin: auto 3rem;
     }
 
+    .image-track-wrapper {
+        min-height: 300px;
+    }
+
     /* --------------------------------------------- */
     /* --------------------------------------------- */
     /* ----------------- Work Page ----------------- */
@@ -2199,6 +2241,10 @@ html.lenis body {
     .innerProcessBox p {
         color: #8A8F98;
         font-size: 0.9rem;
+    }
+
+        .image-track-wrapper {
+        min-height: 400px;
     }
 
     .coverHeroContainer {
